@@ -1,0 +1,1706 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ali Iftikhar | Cancer biologist at McGill University</title>
+<meta name="description" content="Ali Iftikhar is a PhD candidate in Human Genetics at McGill University studying uPAR signaling, treatment resistance, and drug combinations in breast cancer. Research, papers, CV, notes, and qPCR and lab calculators.">
+<link rel="canonical" href="https://aliiftikhar.me/">
+<meta name="author" content="Ali Iftikhar">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Ali Iftikhar | Cancer biologist at McGill">
+<meta property="og:url" content="https://aliiftikhar.me/">
+<meta property="og:site_name" content="Ali Iftikhar">
+<meta property="og:description" content="Cancer biologist at McGill working out why some breast cancers stop responding to treatment.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://aliiftikhar.me/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ali Iftikhar, cancer biologist at McGill">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://aliiftikhar.me/og.png">
+<meta name="twitter:site" content="@aliiftx">
+<meta name="twitter:creator" content="@aliiftx">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23fbfaf7'/%3E%3Cg fill='none' stroke='%23e5534b' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 53 C 15 44, 21 26, 26 12 Q 28 8, 31 12 C 35 25, 39 40, 44 52'/%3E%3Cpath d='M17 38 C 24 34, 31 37, 39 34'/%3E%3C/g%3E%3Ccircle cx='53' cy='50' r='4.2' fill='%23e5534b'/%3E%3C/svg%3E">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Person", "name": "Ali Iftikhar", "url": "https://aliiftikhar.me/", "image": "https://aliiftikhar.me/og.png", "jobTitle": "PhD candidate, Human Genetics", "affiliation": [{"@type": "CollegeOrUniversity", "name": "McGill University", "url": "https://www.mcgill.ca/"}, {"@type": "ResearchOrganization", "name": "Research Institute of the McGill University Health Centre"}], "alumniOf": {"@type": "CollegeOrUniversity", "name": "Lahore University of Management Sciences"}, "homeLocation": {"@type": "Place", "name": "Montreal, Quebec, Canada"}, "knowsAbout": ["Cancer biology", "Breast cancer", "Triple-negative breast cancer", "uPAR", "Drug combinations", "Treatment resistance", "DNA methylation", "qPCR", "Bioinformatics", "CRISPR"], "sameAs": ["https://scholar.google.com/citations?user=534npOYAAAAJ", "https://www.researchgate.net/profile/Ali-Iftikhar-8", "https://www.linkedin.com/in/aliift/", "https://x.com/aliiftx", "https://instagram.com/ali.ift", "https://github.com/aliift"], "alternateName": ["Ali Ift", "aliift", "Ali Iftekhar"], "givenName": "Ali", "familyName": "Iftikhar", "description": "Cancer biologist and PhD candidate in Human Genetics at McGill University studying uPAR signaling, treatment resistance, and drug combinations in breast cancer."}, {"@context": "https://schema.org", "@type": "WebSite", "name": "Ali Iftikhar", "alternateName": ["Ali Ift", "aliift"], "url": "https://aliiftikhar.me/"}]</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Gochi+Hand&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+<style>
+:root{
+  --bg:#fbfaf7;--fg:#161616;--muted:#6f6f6b;--faint:#a9a8a2;--line:#e6e4de;--card:#ffffff;--card2:#ffffff;
+  --accent:#b14a57;--paper:#fffdf5;--rule:#e9e3cf;--ink:#2c3a6b;--marker:#e5534b;--hl:rgba(255,214,90,.55);
+  --tape:rgba(214,203,172,.55);--dymo:#1c1c1c;--dymo-fg:#f3f2ee;--dot:22,22,22;--err:#c0392b;
+  --hand:"Gochi Hand",cursive;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#111111;--fg:#ededeb;--muted:#9a9a95;--faint:#5f5f5b;--line:#262626;--card:#181818;--card2:#1b1b1b;
+  --accent:#e0808c;--paper:#1c1b17;--rule:#2d2a22;--ink:#aebcf0;--marker:#f07a72;--hl:rgba(230,180,40,.35);
+  --tape:rgba(120,110,88,.5);--dymo:#2a2a2a;--dymo-fg:#f3f2ee;--dot:237,237,235;--err:#ff8a7a;
+}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+::selection{background:var(--marker);color:#fff}
+.hand{font-family:var(--hand);color:var(--marker)}
+#field{position:fixed;inset:0;z-index:0;pointer-events:none;transition:opacity .6s}
+body:not([data-page="home"]) #field{opacity:0}
+.shell{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:40px 24px 80px;min-height:100vh;display:flex;flex-direction:column}
+nav{display:flex;justify-content:space-between;align-items:center;font-size:13px}
+nav .name{font-weight:500}
+nav .links{display:flex;gap:20px}
+nav .links a{color:var(--muted);transition:color .2s;position:relative}
+nav .links a:hover,nav .links a[aria-current="page"]{color:var(--fg)}
+nav .links a[aria-current="page"]::after{content:"";position:absolute;left:-3px;right:-3px;bottom:-5px;height:6px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M2 5 C 30 1, 65 8, 98 3' stroke='%23e5534b' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+.page{display:none;flex:1;animation:rise .5s ease both}
+.page.on{display:flex;flex-direction:column}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.page{animation:none}}
+
+/* ---------- home ---------- */
+#home{justify-content:center;padding:12vh 0 0}
+.lede{font-size:clamp(26px,4.4vw,34px);line-height:1.38;letter-spacing:-.02em;font-weight:400;margin:0;max-width:620px}
+.lede b{font-weight:500}
+.w{border-bottom:1px dashed var(--faint);cursor:default;transition:color .2s,border-color .2s}
+.w:hover,.w:focus{color:var(--accent);border-color:var(--accent);outline:none}
+.tip{min-height:24px;margin:18px 0 0;font-size:13px;color:var(--muted)}
+.social{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:56px;font-size:13px}
+.social a{color:var(--muted);transition:color .2s}
+.social a:hover{color:var(--fg)}
+.note{position:relative;align-self:flex-end;margin-top:60px;width:min(320px,100%);background:var(--card2);padding:28px 30px 24px;border-radius:2px;transform:rotate(-2deg);
+  box-shadow:0 1px 2px rgba(0,0,0,.06),0 18px 36px -22px rgba(0,0,0,.35);font-family:var(--hand);color:var(--marker);font-size:25px;line-height:1.35;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.note:hover{transform:rotate(0deg) translateY(-3px)}
+.note::before,.tape::before{content:"";position:absolute;top:-11px;left:50%;width:84px;height:22px;margin-left:-42px;background:var(--tape);transform:rotate(-4deg);z-index:2}
+.note .ln{display:block;clip-path:inset(0 100% 0 0);animation:write .9s steps(18,end) forwards}
+.note .ln:nth-child(1){animation-delay:.5s}.note .ln:nth-child(2){animation-delay:1.4s}.note .ln:nth-child(3){animation-delay:2.3s}.note .ln:nth-child(4){animation-delay:3.2s}.note .ln:nth-child(5){animation-delay:4.1s}
+@keyframes write{to{clip-path:inset(0 0 0 0)}}
+.note .h{font-size:30px;position:relative;display:inline-block;margin-bottom:6px}
+.note .h svg,.note .x svg{position:absolute;overflow:visible}
+.note .h svg{left:-4px;bottom:-6px;width:110%;height:12px}
+.note .x{position:relative;animation:dim .4s ease 5s forwards}
+.note .x svg path{stroke-dasharray:120;stroke-dashoffset:120;animation:strike .45s ease-out 4.8s forwards}
+@keyframes strike{to{stroke-dashoffset:0}}
+@keyframes dim{to{opacity:.55}}
+.note .x svg{left:-4px;top:50%;width:calc(100% + 8px);height:10px;margin-top:-5px}
+.note a{border-bottom:2px solid currentColor}
+.note .sig{text-align:right;margin-top:10px;font-size:28px}
+@media (prefers-reduced-motion:reduce){.note .ln{animation:none;clip-path:none}.note .x{animation:none;opacity:.55}.note .x svg path{animation:none;stroke-dashoffset:0}}
+
+/* ---------- shared paper bits ---------- */
+.head{margin:72px 0 34px;position:relative}
+.head h1{font-size:28px;font-weight:500;letter-spacing:-.02em;margin:0;display:inline-block}
+.head .scrawl{font-family:var(--hand);color:var(--marker);font-size:22px;margin-left:14px;display:inline-block;transform:rotate(-3deg) translateY(-2px);white-space:nowrap}
+.head p{margin:12px 0 0;color:var(--muted);max-width:560px}
+.card{position:relative;background:var(--card2);border-radius:3px;padding:22px 22px 20px;box-shadow:0 1px 2px rgba(0,0,0,.06),0 16px 34px -24px rgba(0,0,0,.4);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.tilt-l{transform:rotate(-1.1deg)}.tilt-r{transform:rotate(.9deg)}
+.card.tilt-l:hover,.card.tilt-r:hover{transform:rotate(0) translateY(-2px)}
+.label{font-size:12px;color:var(--faint);margin:0 0 14px;letter-spacing:.01em}
+.hl{background:linear-gradient(transparent 50%,var(--hl) 50%,var(--hl) 88%,transparent 88%);padding:0 2px}
+.section{margin:0 0 52px}
+.u{border-bottom:1px solid var(--faint)}
+.u:hover{color:var(--accent);border-color:var(--accent)}
+.foot{margin-top:auto;padding-top:64px;font-size:12px;color:var(--faint);display:flex;justify-content:space-between}
+.dymo{display:inline-block;background:var(--dymo);color:var(--dymo-fg);font:500 11.5px/1 Inter,sans-serif;letter-spacing:.09em;text-transform:uppercase;padding:7px 10px 6px;border-radius:2px;text-shadow:0 1px 0 rgba(255,255,255,.15);box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.dymos{display:flex;flex-wrap:wrap;gap:10px 8px}
+.dymos .dymo:nth-child(3n){transform:rotate(-1.5deg)}.dymos .dymo:nth-child(4n+1){transform:rotate(1.2deg)}
+
+.intro{display:grid;grid-template-columns:1fr 210px;gap:34px;align-items:start}
+.polaroid{position:relative;background:#fff;padding:10px 10px 0;box-shadow:0 1px 2px rgba(0,0,0,.08),0 18px 34px -20px rgba(0,0,0,.45);transform:rotate(3deg);transition:transform .5s cubic-bezier(.2,.8,.2,1);margin:6px 6px 0 0}
+.polaroid:hover{transform:rotate(0) scale(1.02)}
+.polaroid img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:#eee}
+.polaroid figcaption{font-family:var(--hand);color:#2c3a6b;font-size:20px;text-align:center;padding:8px 4px 10px;line-height:1.1}
+/* ---------- research ---------- */
+.board{display:grid;grid-template-columns:1fr 1fr;gap:30px 26px;margin:6px 0 56px}
+.proj .doodle{width:78px;height:56px;color:var(--marker);display:block;margin:-4px 0 8px}
+.proj .t{font-weight:500;margin:0 0 4px}
+.proj p{margin:0;color:var(--muted);font-size:14px}
+.proj .tag{position:absolute;right:16px;top:14px;font-family:var(--hand);color:var(--marker);font-size:19px;transform:rotate(6deg)}
+.week{display:grid;grid-template-columns:200px 1fr;gap:26px;align-items:center}
+.week svg{width:100%;height:auto;color:var(--marker)}
+.week .side .t2{font-weight:500;margin-bottom:2px}
+.week .side p{margin:0 0 14px;color:var(--muted);font-size:14px}
+.feat .t{font-weight:500;line-height:1.45;display:block;padding-right:70px}
+.feat .t:hover{color:var(--accent)}
+.feat .d{color:var(--muted);font-size:14px;margin-top:6px}
+.sticker{position:absolute;right:-12px;top:-14px;background:var(--marker);color:#fff;font-family:var(--hand);font-size:18px;line-height:1;padding:9px 12px 8px;border-radius:50%;transform:rotate(12deg);box-shadow:0 6px 14px -8px rgba(0,0,0,.5)}
+.more{display:inline-block;font-family:var(--hand);color:var(--marker);font-size:22px;margin-top:18px}
+.more:hover{transform:translateX(3px)}
+
+/* ---------- papers ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 34px}
+.chip{border:0;cursor:pointer;background:var(--dymo);color:var(--dymo-fg);font:500 11.5px/1 Inter,sans-serif;letter-spacing:.09em;text-transform:uppercase;padding:8px 11px 7px;border-radius:2px;opacity:.35;transition:opacity .2s,transform .2s}
+.chip:hover{opacity:.7}
+.chip[aria-pressed="true"]{opacity:1;background:var(--marker);transform:rotate(-2deg)}
+.yr{display:grid;grid-template-columns:96px 1fr;gap:0 18px;margin-bottom:26px}
+.yr .n{font-family:var(--hand);color:var(--marker);font-size:34px;line-height:1;padding-top:10px}
+.pub{position:relative;padding:12px 0 14px;border-bottom:1px dashed var(--line)}
+.pub:last-child{border-bottom:0}
+.pub .t{line-height:1.45;display:block}
+.pub a.t:hover{color:var(--accent)}
+.pub .d{color:var(--muted);font-size:13.5px;margin-top:4px}
+.pub .d b{font-weight:500;color:var(--fg)}
+.pub .d i{font-style:normal}
+.pub .m{position:absolute;right:-150px;top:10px;width:130px;font-family:var(--hand);color:var(--marker);font-size:19px;line-height:1.1;transform:rotate(-4deg)}
+.pub .m svg{display:block;width:44px;height:18px;margin:0 0 2px -48px;overflow:visible}
+.pub.hide{display:none}
+.yr.hide{display:none}
+
+/* ---------- cv ---------- */
+.pass{display:grid;grid-template-columns:1fr 150px;padding:0;overflow:hidden;margin:0 0 60px}
+.pass .main{padding:22px 24px 20px}
+.pass .top{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.pass .route{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;margin:12px 0 16px}
+.pass .code{font-size:42px;font-weight:500;letter-spacing:-.02em;line-height:1}
+.pass .city{font-size:12px;color:var(--muted);margin-top:4px}
+.pass .route svg{width:100%;height:46px;color:var(--marker);overflow:visible}
+.pass .fields{display:grid;grid-template-columns:repeat(4,auto);gap:6px 18px;border-top:1px dashed var(--line);padding-top:12px}
+.pass .k{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.pass .v{font-size:13px;font-weight:500}
+.pass .stub{border-left:2px dashed var(--line);padding:22px 16px 18px;display:flex;flex-direction:column;justify-content:space-between;position:relative}
+.pass .stub::before,.pass .stub::after{content:"";position:absolute;left:-9px;width:16px;height:16px;border-radius:50%;background:var(--bg)}
+.pass .stub::before{top:-8px}.pass .stub::after{bottom:-8px}
+.pass .stub .hand{font-size:22px;line-height:1.1;transform:rotate(-4deg)}
+.bars{display:flex;align-items:flex-end;gap:2px;height:42px;margin-top:10px}
+.bars i{display:block;background:var(--fg);height:100%}
+.stop{display:grid;grid-template-columns:150px 1fr;gap:26px;margin:0 0 56px;align-items:start}
+.stamp{width:140px;height:140px;opacity:.85;mix-blend-mode:multiply}
+@media (prefers-color-scheme:dark){.stamp{mix-blend-mode:normal}}
+.stamp.a{color:var(--marker);--r:-12deg;transform:rotate(var(--r))}
+.stamp.b{color:var(--ink);--r:9deg;transform:rotate(var(--r))}
+.stop .when{font-family:var(--hand);color:var(--marker);font-size:22px;margin:0 0 6px}
+.entry{margin:0 0 20px}
+.entry .t{font-weight:500}
+.entry .y{font-size:12px;color:var(--faint);margin:2px 0 4px}
+.entry p{margin:0;color:var(--muted);font-size:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.two .t2{font-family:var(--hand);color:var(--marker);font-size:22px;margin:0 0 10px}
+.teach ul{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:14px}
+.teach li{margin:3px 0}
+
+/* ---------- tools ---------- */
+.bench{display:flex;flex-wrap:wrap;gap:10px 8px;margin:0 0 30px}
+.bench .chip{opacity:.4}
+.bench .chip[aria-pressed="true"]{opacity:1}
+.tool{display:none}
+.tool.on{display:block;animation:rise .4s ease both}
+.tool > .card{padding:26px 26px 24px}
+.tool h2{font-size:20px;font-weight:500;margin:0 0 2px}
+.tool .sub{color:var(--muted);font-size:14px;margin:0 0 20px;max-width:560px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:99px;padding:3px;margin:0 0 20px;background:var(--bg)}
+.seg button{border:0;background:none;border-radius:99px;padding:6px 14px;font-size:13px;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.f{display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--muted)}
+input,select{background:var(--card);border:1px solid var(--line);border-radius:8px;height:40px;padding:0 12px;min-width:0;width:100%;transition:border-color .2s}
+input:focus,select:focus{outline:none;border-color:var(--fg)}
+.btn{background:var(--fg);color:var(--bg);border:1px solid var(--fg);border-radius:99px;padding:9px 16px;font-size:13px;cursor:pointer;transition:opacity .2s}
+.btn:hover{opacity:.85}
+.btn.ghost{background:none;color:var(--fg);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--fg);opacity:1}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:16px}
+.msg{font-size:13px;min-height:20px;margin:10px 0 0;color:var(--muted)}
+.msg.err{color:var(--err)}
+.formula{font-size:12px;color:var(--faint);margin:18px 0 0}
+details summary{cursor:pointer;font-size:13px;color:var(--muted);margin-top:14px}
+/* quick qPCR sheet */
+.sheet{display:grid;grid-template-columns:110px 1fr 1fr;gap:10px 12px;align-items:center}
+.sheet .hd{font-size:12px;color:var(--muted)}
+.sheet .hd input,.sheet .rl input{height:34px;font-weight:500;color:var(--fg);background:transparent;border-style:dashed}
+.sheet .rl input{font-size:14px}
+.sheet input.ct{font-variant-numeric:tabular-nums}
+.hint{font-size:12px;color:var(--faint);margin-top:10px}
+.result{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px;margin-top:26px;align-items:start}
+.post{background:#fff6b8;color:#3d3510;padding:20px 20px 18px;transform:rotate(-1.5deg);box-shadow:0 12px 24px -16px rgba(0,0,0,.45);position:relative}
+@media (prefers-color-scheme:dark){.post{background:#4a4320;color:#fff7cc}}
+.post .big{font-family:var(--hand);font-size:52px;line-height:1;color:var(--marker)}
+.post .big small{font-size:26px}
+.post .say{font-family:var(--hand);font-size:22px;line-height:1.2;margin-top:6px}
+.post svg{width:100%;height:96px;margin-top:10px;overflow:visible}
+.post .big small{font-size:24px;margin-left:4px}
+.post svg.gel{height:92px}.post svg.curve{height:110px}
+.work .note2{color:var(--muted);font-family:Inter,sans-serif;font-size:12px;margin-top:8px;line-height:1.5}
+.mom{display:flex;align-items:center;gap:12px;margin:-8px 0 30px;flex-wrap:wrap}
+.mom .hand{font-size:20px}
+.plain{display:none}
+body.plainmode .proj .sci,body.plainmode .head .sci{display:none}
+body.plainmode .proj .plain,body.plainmode .head .plain{display:block}
+body.plainmode .proj .plain{animation:rise .4s ease both}
+.wbt td.bad{color:var(--err)}
+.io{margin-top:22px;padding-top:16px;border-top:1px dashed var(--line)}
+.io .hint{margin:0;flex-basis:100%}
+.post svg.std{height:120px}
+.edit.two-col{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:14px;border:0;background:none;overflow:visible}
+.edit.two-col > div{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.sub2{font-size:12px;color:var(--muted);margin:0 0 6px}
+@media (max-width:640px){.edit.two-col{grid-template-columns:1fr}}
+.work{font-family:var(--hand);font-size:20px;line-height:1.5;color:var(--ink)}
+.work .ttl{color:var(--marker);font-size:23px;margin-bottom:4px}
+.work div{line-height:1.35;margin-bottom:4px}
+.work .ans{color:var(--marker)}
+.warn{font-size:12px;color:var(--muted);border-left:2px solid var(--marker);padding:4px 0 4px 12px;margin:18px 0 0}
+/* table editor */
+.edit{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.edit table{border-collapse:collapse;width:100%;min-width:420px;font-size:13px}
+.edit th{font-weight:500;color:var(--muted);text-align:left;font-size:12px;padding:8px 8px;background:var(--bg);border-bottom:1px solid var(--line)}
+.edit td{padding:0;border-bottom:1px solid var(--line)}
+.edit tr:last-child td{border-bottom:0}
+.edit td input{border:0;border-radius:0;height:36px;background:transparent;padding:0 8px;font-size:13px}
+.edit td input:focus{background:var(--bg);box-shadow:inset 0 0 0 1.5px var(--marker)}
+.edit td.x{width:34px;text-align:center}
+.edit td.x button{border:0;background:none;color:var(--faint);cursor:pointer;font-size:16px;width:34px;height:36px}
+.edit td.x button:hover{color:var(--marker)}
+.edit td.num input{font-variant-numeric:tabular-nums}
+.file{position:relative;overflow:hidden}
+.file input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.drop.over{outline:2px dashed var(--marker);outline-offset:6px;border-radius:10px}
+.opts{margin-top:18px}
+.tbl{overflow-x:auto;margin-top:14px;border:1px solid var(--line);border-radius:10px}
+.tbl table{border-collapse:collapse;width:100%;font-size:13px;min-width:540px}
+.tbl th{font-weight:500;color:var(--muted);text-align:left;font-size:12px;background:var(--bg)}
+.tbl th,.tbl td{padding:9px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+.tbl tr:last-child td{border:0}
+.tbl td.num{font-variant-numeric:tabular-nums}
+.up{color:var(--marker)}
+#chart svg{width:100%;height:auto;display:block;margin-top:22px}
+/* other tool outputs */
+.out{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;margin-top:22px;padding-top:18px;border-top:1px dashed var(--line)}
+.out .big{font-family:var(--hand);color:var(--marker);font-size:46px;line-height:1}
+.out p{margin:0 0 6px;color:var(--muted);font-size:14px;flex:1;min-width:200px}
+.viz{margin-top:18px}
+.viz svg{width:100%;height:auto;display:block;overflow:visible}
+.plate{display:grid;gap:4px;margin-top:18px;max-width:440px}
+.plate i{display:block;aspect-ratio:1;border-radius:50%;border:1.5px solid var(--line);transition:background .25s,border-color .25s}
+.plate i.on{background:var(--marker);border-color:var(--marker);opacity:.8}
+
+
+/* ---------- motion ---------- */
+.doodle *{transform-box:view-box}
+.proj{cursor:default}
+.proj .rec{transform-origin:40px 49px}
+.proj .lig{opacity:0;transform:translate(16px,-14px);transition:transform .7s cubic-bezier(.3,1.4,.5,1),opacity .3s}
+.proj .spark{opacity:0;stroke-dasharray:6;stroke-dashoffset:6}
+.proj:hover .lig,.proj.play .lig{opacity:1;transform:none}
+.proj:hover .rec,.proj.play .rec{animation:wig .6s ease .55s}
+.proj:hover .spark,.proj.play .spark{opacity:1;animation:spark .45s ease .6s forwards}
+@keyframes wig{25%{transform:rotate(-4deg)}60%{transform:rotate(3deg)}}
+@keyframes spark{to{stroke-dashoffset:0}}
+.proj .pill{transform-origin:67px 8.5px}
+.proj .trail{transition:opacity .3s}
+.proj:hover .trail,.proj.play .trail{opacity:0}
+.proj:hover .pill,.proj.play .pill{animation:bounce 1.5s cubic-bezier(.4,0,.3,1) both}
+.proj:hover .shd,.proj.play .shd{transform-origin:28px 29px;animation:thud .5s ease .5s}
+@keyframes bounce{0%{transform:none}35%{transform:translate(-16px,10px) rotate(-25deg)}62%{transform:translate(4px,34px) rotate(60deg);opacity:0}63%{transform:translate(0,-8px);opacity:0}100%{transform:none;opacity:1}}
+@keyframes thud{40%{transform:scale(1.07)}}
+.proj .capA,.proj .tabB{transition:transform .6s cubic-bezier(.3,1.5,.5,1)}
+.proj .plus{transition:opacity .25s;transform-origin:46px 29px}
+.proj:hover .capA,.proj.play .capA{transform:translate(9px,0)}
+.proj:hover .tabB,.proj.play .tabB{transform:translate(-11px,0)}
+.proj:hover .plus,.proj.play .plus{opacity:0}
+.proj:hover .hx,.proj.play .hx{animation:helix 2.4s linear infinite}
+@keyframes helix{to{transform:translateX(-36px)}}
+.stamp.pre{opacity:0}
+.stamp.inked{animation:ink .55s cubic-bezier(.2,.9,.3,1.2) both}
+@keyframes ink{0%{opacity:0;transform:rotate(var(--r)) scale(1.7)}70%{opacity:.9;transform:rotate(var(--r)) scale(.94)}100%{opacity:.85;transform:rotate(var(--r)) scale(1)}}
+.pub .m svg path{stroke-dasharray:60;stroke-dashoffset:0}
+.pub .m.pre svg path{stroke-dashoffset:60}
+.pub .m.pre{opacity:0}
+.pub .m.drawn{transition:opacity .3s}.pub .m.drawn svg path{transition:stroke-dashoffset .6s ease .15s}
+.dymo{transition:transform .25s}
+.dymos .dymo:hover{transform:rotate(0) translateY(-3px);box-shadow:0 5px 8px -4px rgba(0,0,0,.35)}
+.week .slice{cursor:pointer;transition:opacity .2s}
+.paper{transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.paper:hover{transform:rotate(-.4deg) translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.proj *,.stamp,.pub .m,.pub .m svg path{animation:none!important;transition:none!important}.stamp.pre,.pub .m.pre{opacity:.85}.pub .m.pre svg path{stroke-dashoffset:0}}
+/* ---------- notes ---------- */
+.paper{background:var(--paper);border-radius:4px;padding:34px 34px 30px 58px;position:relative;
+  background-image:linear-gradient(90deg,transparent 40px,rgba(177,74,87,.35) 40px 41px,transparent 41px),repeating-linear-gradient(transparent 0 33px,var(--rule) 33px 34px);
+  box-shadow:0 1px 0 var(--line),0 20px 40px -30px rgba(0,0,0,.4);font-family:var(--hand);color:var(--ink);font-size:25px;line-height:34px;margin-bottom:32px}
+.paper h3{font-size:30px;font-weight:400;margin:0}
+.paper .date{font-size:20px;color:var(--faint);float:right}
+.paper p{margin:0 0 34px}
+.paper p:last-child{margin:0}
+.paper s{text-decoration-thickness:2px;opacity:.7}
+.paper mark{background:linear-gradient(transparent 55%,rgba(177,74,87,.25) 55%);color:inherit}
+
+@media (max-width:900px){.pub .m{position:static;width:auto;transform:rotate(-2deg);display:inline-block;margin-top:4px;font-size:18px}.pub .m svg{display:none}}
+@media (max-width:640px){
+  body{font-size:15px}
+  .shell{padding:calc(20px + env(safe-area-inset-top)) 18px calc(40px + env(safe-area-inset-bottom))}
+  nav{flex-direction:column;align-items:flex-start;gap:10px}
+  nav .name{font-size:14px}
+  nav .links{gap:0;width:100%;justify-content:space-between}
+  nav .links a{padding:6px 0}
+  #home{justify-content:flex-start;padding:14vh 0 0}
+  .lede{font-size:27px;line-height:1.36}
+  .social{margin-top:36px;gap:10px 18px}
+  .social a{padding:4px 0}
+  .note{align-self:center;margin-top:52px;width:100%;max-width:300px;font-size:23px;padding:24px 24px 20px}
+  .head{margin:44px 0 26px}
+  .head h1{font-size:26px}
+  .head .scrawl{display:block;margin:4px 0 0;font-size:21px;transform:rotate(-2deg);white-space:normal}
+  .board,.two,.grid,.grid.g3{grid-template-columns:1fr}
+  .result{grid-template-columns:minmax(0,1fr)}
+  .edit table{min-width:0}
+  .edit td.x,.edit td.x button{width:28px}
+  .post{transform:rotate(-1deg)}
+  .grid.g4{grid-template-columns:1fr 1fr}
+  .board{gap:26px}
+  .tilt-l{transform:rotate(-.6deg)}.tilt-r{transform:rotate(.5deg)}
+  .week{grid-template-columns:1fr;gap:10px}
+  .intro{grid-template-columns:1fr;gap:26px}
+  .polaroid{width:220px;margin:0 auto;transform:rotate(2deg)}
+  .week svg{max-width:220px;margin:0 auto}
+  .yr{grid-template-columns:1fr}
+  .yr .n{font-size:30px;padding:0 0 2px}
+  .sticker{right:-6px}
+  .pass{grid-template-columns:1fr}
+  .pass .stub{border-left:0;border-top:2px dashed var(--line);flex-direction:row;align-items:center;gap:14px;padding:14px 20px}
+  .pass .stub::before,.pass .stub::after{top:-9px;left:auto;bottom:auto}
+  .pass .stub::before{left:-8px}.pass .stub::after{right:-8px}
+  .pass .code{font-size:34px}
+  .pass .fields{grid-template-columns:1fr 1fr}
+  .bars{flex:1;height:34px;margin:0}
+  .stop{grid-template-columns:1fr;gap:6px}
+  .stamp{width:110px;height:110px}
+  .tool > .card{padding:22px 16px 20px}
+  .sheet{grid-template-columns:78px 1fr 1fr;gap:8px}
+  input,select{font-size:16px;height:44px}
+  .edit td input{font-size:16px;height:42px}
+  .post .big{font-size:46px}
+  .paper{padding:26px 18px 22px 46px;font-size:22px;line-height:32px;background-image:linear-gradient(90deg,transparent 32px,rgba(177,74,87,.35) 32px 33px,transparent 33px),repeating-linear-gradient(transparent 0 31px,var(--rule) 31px 32px)}
+  .paper p{margin-bottom:32px}
+  .paper .date{float:none;display:block;font-size:18px}
+  .foot{padding-top:48px}
+}
+@media (hover:none){.w{border-bottom-style:solid;border-color:var(--line)}}
+</style>
+</head>
+<body data-page="home">
+<canvas id="field" aria-hidden="true"></canvas>
+<div class="shell">
+<nav>
+  <a class="name" href="#home">Ali Iftikhar</a>
+  <div class="links">
+    <a href="#research">Research</a>
+    <a href="#papers">Papers</a>
+    <a href="#cv">CV</a>
+    <a href="#tools">Tools</a>
+    <a href="#notes">Notes</a>
+  </div>
+</nav>
+
+<!-- ================= HOME ================= -->
+<section class="page" id="home">
+  <h1 class="lede">
+    <b>Ali Iftikhar</b> is a <span class="w" tabindex="0" data-t="PhD candidate, Human Genetics, McGill University">cancer biologist</span>
+    working out why some breast cancers <span class="w" tabindex="0" data-t="Signaling, therapy resistance, and metastasis">stop responding to treatment</span>,
+    and <span class="w" tabindex="0" data-t="Drug combinations, tested at the bench and in code">how to corner them</span>.
+  </h1>
+  <p class="tip" id="tip">&nbsp;</p>
+  <div class="social" id="social"></div>
+  <aside class="note" aria-label="Handwritten note">
+    <span class="ln"><span class="h">to do<svg viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M1 6 C 30 2, 60 9, 99 4" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span></span>
+    <span class="ln"><span class="x">split the cells<svg viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 6 C 35 3, 65 8, 100 4" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span></span>
+    <span class="ln">back up the data (again)</span>
+    <span class="ln"><a class="mailto" href="mailto:ali.iftikhar.ah@gmail.com">reply to your email</a></span>
+    <span class="ln sig">A.</span>
+  </aside>
+</section>
+
+<!-- ================= RESEARCH ================= -->
+<section class="page" id="research">
+  <div class="head">
+    <div>
+      <h1>Research</h1><span class="scrawl">(the short version)</span>
+      <p class="sci">I'm a PhD candidate in Human Genetics at McGill, in Dr. Shafaat Rabbani's lab at the Research Institute of the MUHC. I study breast cancer from both ends: cells, blots, and mice on one side, R, Python, and a cluster on the other.</p>
+      <p class="plain">I'm doing a PhD at McGill in Montreal, studying breast cancer. Half my time I'm growing cancer cells and running experiments on them. The other half I'm on a computer, making sense of what they told me.</p>
+    </div>
+  </div>
+  <div class="mom">
+    <div class="seg" id="momSeg" style="margin:0"><button aria-pressed="true" data-m="sci">For scientists</button><button aria-pressed="false" data-m="plain">For my mom</button></div>
+    <span class="hand" id="momNote"></span>
+  </div>
+
+  <div class="board">
+    <article class="card tape tilt-l proj">
+      <span class="tag">now</span>
+      <svg class="doodle" viewBox="0 0 80 58" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 50 C 13 46, 23 54, 33 50 S 53 46, 63 50 S 75 52, 78 50"/><g class="rec"><path d="M40 49 L40 40"/><circle cx="40" cy="33" r="7"/><circle cx="31" cy="20" r="7"/><circle cx="48" cy="14" r="7"/></g><g class="lig"><circle cx="58.5" cy="7" r="4" fill="currentColor"/></g><path class="spark" d="M64 2 L67 -1 M66 8 L70 8 M62 13 L65 15"/></svg>
+      <h3 class="t">uPAR in breast cancer</h3>
+      <p class="sci">What the uPAR receptor drives in invasion, stemness, and spread to bone, and what happens when you take it away.</p>
+      <p class="plain">Cancer cells have little antennas on their surface. One of them, called uPAR, helps them break loose and travel around the body, even into bone. I study what happens when you take that antenna away.</p>
+    </article>
+    <article class="card tape tilt-r proj">
+      <span class="tag">now</span>
+      <svg class="doodle" viewBox="0 0 80 58" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="shd"><path d="M28 5 L47 11 V27 C47 40 38 49 28 54 C18 49 9 40 9 27 V11 Z"/><circle cx="28" cy="29" r="10"/><circle cx="26" cy="27" r="3.5"/></g><g class="pill"><rect x="58" y="4" width="18" height="9" rx="4.5" transform="rotate(35 67 8.5)"/><path d="M67 3.5 L66 13" transform="rotate(35 67 8.5)"/></g><g class="trail"><path d="M60 16 C 55 20, 52 24, 51 27"/><path d="M54 30 C 60 32, 66 36, 70 42"/><path d="M64 42 L70 42 L69 36"/></g></svg>
+      <h3 class="t">Treatment resistance</h3>
+      <p class="sci">How triple-negative and HER2-positive breast tumors adapt and keep growing under therapy.</p>
+      <p class="plain">Sometimes a treatment works for a while, and then the cancer learns to ignore it. I try to figure out how it learns that, so we can stop it from happening.</p>
+    </article>
+    <article class="card tape tilt-r proj">
+      <span class="tag">now</span>
+      <svg class="doodle" viewBox="0 0 80 58" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="capA"><rect x="4" y="22" width="30" height="14" rx="7" transform="rotate(-18 19 29)"/><path d="M19 22 L20 36" transform="rotate(-18 19 29)"/></g><path class="plus" d="M42 29 H50 M46 25 V33"/><g class="tabB"><circle cx="66" cy="29" r="10"/><path d="M59 33 L73 25"/></g><path class="spark" d="M46 14 L46 9 M38 17 L35 13 M54 17 L57 13 M46 44 L46 49 M38 41 L35 45 M54 41 L57 45"/></svg>
+      <h3 class="t">Drug combinations</h3>
+      <p class="sci">Pairing a genetic hit with a drug so tumors lose their escape routes, then scoring the synergy.</p>
+      <p class="plain">If a tumor has two escape doors, one drug only shuts one of them. I test pairs of treatments that shut both doors at the same time.</p>
+    </article>
+    <article class="card tape tilt-l proj">
+      <span class="tag">with friends</span>
+      <svg class="doodle" viewBox="0 0 80 58" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><clipPath id="hxc"><rect x="2" y="-2" width="76" height="62"/></clipPath></defs><g clip-path="url(#hxc)"><g class="hx"><path d="M4.0 29.0 L4.8 27.3 L5.5 25.6 L6.2 24.0 L7.0 22.5 L7.8 21.1 L8.5 19.8 L9.2 18.7 L10.0 17.7 L10.8 17.0 L11.5 16.4 L12.2 16.1 L13.0 16.0 L13.8 16.1 L14.5 16.4 L15.2 17.0 L16.0 17.7 L16.8 18.7 L17.5 19.8 L18.2 21.1 L19.0 22.5 L19.8 24.0 L20.5 25.6 L21.2 27.3 L22.0 29.0 L22.8 30.7 L23.5 32.4 L24.2 34.0 L25.0 35.5 L25.8 36.9 L26.5 38.2 L27.2 39.3 L28.0 40.3 L28.8 41.0 L29.5 41.6 L30.2 41.9 L31.0 42.0 L31.8 41.9 L32.5 41.6 L33.2 41.0 L34.0 40.3 L34.8 39.3 L35.5 38.2 L36.2 36.9 L37.0 35.5 L37.8 34.0 L38.5 32.4 L39.2 30.7 L40.0 29.0 L40.8 27.3 L41.5 25.6 L42.2 24.0 L43.0 22.5 L43.8 21.1 L44.5 19.8 L45.2 18.7 L46.0 17.7 L46.8 17.0 L47.5 16.4 L48.2 16.1 L49.0 16.0 L49.8 16.1 L50.5 16.4 L51.2 17.0 L52.0 17.7 L52.8 18.7 L53.5 19.8 L54.2 21.1 L55.0 22.5 L55.8 24.0 L56.5 25.6 L57.2 27.3 L58.0 29.0 L58.8 30.7 L59.5 32.4 L60.2 34.0 L61.0 35.5 L61.8 36.9 L62.5 38.2 L63.2 39.3 L64.0 40.3 L64.8 41.0 L65.5 41.6 L66.2 41.9 L67.0 42.0 L67.8 41.9 L68.5 41.6 L69.2 41.0 L70.0 40.3 L70.8 39.3 L71.5 38.2 L72.2 36.9 L73.0 35.5 L73.8 34.0 L74.5 32.4 L75.2 30.7 L76.0 29.0 L76.8 27.3 L77.5 25.6 L78.2 24.0 L79.0 22.5 L79.8 21.1 L80.5 19.8 L81.2 18.7 L82.0 17.7 L82.8 17.0 L83.5 16.4 L84.2 16.1 L85.0 16.0 L85.8 16.1 L86.5 16.4 L87.2 17.0 L88.0 17.7 L88.8 18.7 L89.5 19.8 L90.2 21.1 L91.0 22.5 L91.8 24.0 L92.5 25.6 L93.2 27.3 L94.0 29.0 L94.8 30.7 L95.5 32.4 L96.2 34.0 L97.0 35.5 L97.8 36.9 L98.5 38.2 L99.2 39.3 L100.0 40.3 L100.8 41.0 L101.5 41.6 L102.2 41.9 L103.0 42.0 L103.8 41.9 L104.5 41.6 L105.2 41.0 L106.0 40.3 L106.8 39.3 L107.5 38.2 L108.2 36.9 L109.0 35.5 L109.8 34.0 L110.5 32.4 L111.2 30.7 L112.0 29.0"/><path d="M4.0 29.0 L4.8 30.7 L5.5 32.4 L6.2 34.0 L7.0 35.5 L7.8 36.9 L8.5 38.2 L9.2 39.3 L10.0 40.3 L10.8 41.0 L11.5 41.6 L12.2 41.9 L13.0 42.0 L13.8 41.9 L14.5 41.6 L15.2 41.0 L16.0 40.3 L16.8 39.3 L17.5 38.2 L18.2 36.9 L19.0 35.5 L19.8 34.0 L20.5 32.4 L21.2 30.7 L22.0 29.0 L22.8 27.3 L23.5 25.6 L24.2 24.0 L25.0 22.5 L25.8 21.1 L26.5 19.8 L27.2 18.7 L28.0 17.7 L28.8 17.0 L29.5 16.4 L30.2 16.1 L31.0 16.0 L31.8 16.1 L32.5 16.4 L33.2 17.0 L34.0 17.7 L34.8 18.7 L35.5 19.8 L36.2 21.1 L37.0 22.5 L37.8 24.0 L38.5 25.6 L39.2 27.3 L40.0 29.0 L40.8 30.7 L41.5 32.4 L42.2 34.0 L43.0 35.5 L43.8 36.9 L44.5 38.2 L45.2 39.3 L46.0 40.3 L46.8 41.0 L47.5 41.6 L48.2 41.9 L49.0 42.0 L49.8 41.9 L50.5 41.6 L51.2 41.0 L52.0 40.3 L52.8 39.3 L53.5 38.2 L54.2 36.9 L55.0 35.5 L55.8 34.0 L56.5 32.4 L57.2 30.7 L58.0 29.0 L58.8 27.3 L59.5 25.6 L60.2 24.0 L61.0 22.5 L61.8 21.1 L62.5 19.8 L63.2 18.7 L64.0 17.7 L64.8 17.0 L65.5 16.4 L66.2 16.1 L67.0 16.0 L67.8 16.1 L68.5 16.4 L69.2 17.0 L70.0 17.7 L70.8 18.7 L71.5 19.8 L72.2 21.1 L73.0 22.5 L73.8 24.0 L74.5 25.6 L75.2 27.3 L76.0 29.0 L76.8 30.7 L77.5 32.4 L78.2 34.0 L79.0 35.5 L79.8 36.9 L80.5 38.2 L81.2 39.3 L82.0 40.3 L82.8 41.0 L83.5 41.6 L84.2 41.9 L85.0 42.0 L85.8 41.9 L86.5 41.6 L87.2 41.0 L88.0 40.3 L88.8 39.3 L89.5 38.2 L90.2 36.9 L91.0 35.5 L91.8 34.0 L92.5 32.4 L93.2 30.7 L94.0 29.0 L94.8 27.3 L95.5 25.6 L96.2 24.0 L97.0 22.5 L97.8 21.1 L98.5 19.8 L99.2 18.7 L100.0 17.7 L100.8 17.0 L101.5 16.4 L102.2 16.1 L103.0 16.0 L103.8 16.1 L104.5 16.4 L105.2 17.0 L106.0 17.7 L106.8 18.7 L107.5 19.8 L108.2 21.1 L109.0 22.5 L109.8 24.0 L110.5 25.6 L111.2 27.3 L112.0 29.0"/><path d="M10 19.9 L10 38.1 M16 19.9 L16 38.1 M28 19.9 L28 38.1 M34 19.9 L34 38.1 M46 19.9 L46 38.1 M52 19.9 L52 38.1 M64 19.9 L64 38.1 M70 19.9 L70 38.1 M82 19.9 L82 38.1 M88 19.9 L88 38.1 M100 19.9 L100 38.1 M106 19.9 L106 38.1" stroke-width="1.8" opacity=".7"/><path d="M13 16 L13 8 M49 16 L49 8 M85 16 L85 8"/><circle cx="13" cy="5.5" r="3" fill="currentColor"/><circle cx="49" cy="5.5" r="3" fill="currentColor"/><circle cx="85" cy="5.5" r="3" fill="currentColor"/></g></g></svg>
+      <h3 class="t">Clinical epigenetics</h3>
+      <p class="sci">DNA methylation markers with clinical questions behind them: a cell-free DNA panel that tracks prostate cancer grade from a blood draw, and methylation age in a lung health cohort.</p>
+      <p class="plain">Our DNA carries tiny chemical sticky notes. With friends at McGill, I read them from a simple blood draw, to help spot aggressive prostate cancer and to learn how the body ages.</p>
+    </article>
+  </div>
+
+  <div class="section card week tape tilt-l">
+    <svg viewBox="0 0 200 180" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-label="Pie chart of a typical week: bench 45%, code 45%, waiting on the centrifuge 10%">
+      <path d="M100 18 C 146 16, 184 52, 182 92 C 181 136, 144 166, 100 166 C 54 167, 18 132, 19 90 C 20 50, 56 19, 100 18 Z"/>
+      <path d="M100 92 L100 19"/><path d="M100 92 L130 160"/><path d="M100 92 L40 40"/>
+      <path d="M100 92 L71 28 M84 23 L56 35 M100 92 L58 30" stroke-width="1.2" opacity=".5"/>
+      <text x="140" y="80" font-family="Gochi Hand,cursive" font-size="17" fill="currentColor" stroke="none">bench</text>
+      <text x="40" y="120" font-family="Gochi Hand,cursive" font-size="17" fill="currentColor" stroke="none">code</text>
+    </svg>
+    <div class="side">
+      <p class="label" style="margin-bottom:10px">An honest week</p>
+      <div class="t2">At the bench</div>
+      <p>CRISPR knockouts, western blots, qPCR, flow cytometry, confocal imaging, cloning, and mouse tumor models.</p>
+      <div class="t2">In code</div>
+      <p>RNA-seq and methylation pipelines, single-cell workflows, survival models, and deep learning on microscopy images.</p>
+      <div class="hand" style="font-size:20px">the shaded bit is waiting on the centrifuge</div>
+    </div>
+  </div>
+
+  <p class="label">Featured</p>
+  <div class="card tape tilt-r feat">
+    <span class="sticker">first<br>author</span>
+    <a class="t" href="https://doi.org/10.3390/cancers17203309" target="_blank" rel="noopener">The urokinase-type plasminogen activator receptor (uPAR) as a mediator of physiological and pathological processes: potential therapeutic strategies</a>
+    <div class="d"><b class="hl">Iftikhar A</b>, Mahmood N, Rabbani SA · Cancers, 2025</div>
+  </div>
+  <a class="more" href="#papers">all papers &rarr;</a>
+</section>
+
+<!-- ================= PAPERS ================= -->
+<section class="page" id="papers">
+  <div class="head">
+    <h1>Papers</h1><span class="scrawl">twelve published. one is about dogs.</span>
+    <p>From McGill, and from my years at LUMS, where I tested a lot of new molecules for the chemists down the hall.</p>
+  </div>
+  <div class="chips" id="chips" role="group" aria-label="Filter papers">
+    <button class="chip" aria-pressed="true" data-f="all">All</button>
+    <button class="chip" aria-pressed="false" data-f="cancer">Cancer biology</button>
+    <button class="chip" aria-pressed="false" data-f="chem">Med chem</button>
+    <button class="chip" aria-pressed="false" data-f="comp">Computational</button>
+    <button class="chip" aria-pressed="false" data-f="gen">Genetics</button>
+  </div>
+  <div id="publist"></div>
+</section>
+
+<!-- ================= CV ================= -->
+<section class="page" id="cv">
+  <div class="head">
+    <h1>CV</h1><span class="scrawl">Lahore to Montreal, so far</span>
+    <p>The short version. The long one is <a class="u mailto" href="mailto:ali.iftikhar.ah@gmail.com?subject=CV%20request">a message away</a>.</p>
+  </div>
+
+  <div class="card pass tape">
+    <div class="main">
+      <div class="top"><span>Boarding pass</span><span>One way</span></div>
+      <div class="route">
+        <div><div class="code">LHE</div><div class="city">Lahore</div></div>
+        <svg viewBox="0 0 200 46" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path id="route" d="M6 38 C 60 -6, 140 -6, 194 38" stroke-dasharray="3 7"/><g id="plane" transform="translate(100 5) rotate(0)"><path transform="scale(.95)" d="M18 0 C18 -1.6 16.5 -2.2 14.5 -2.2 L5 -2.2 L-3 -12 L-7 -12 L-2.5 -2.2 L-10 -2.2 L-13 -6.5 L-16 -6.5 L-14 0 L-16 6.5 L-13 6.5 L-10 2.2 L-2.5 2.2 L-7 12 L-3 12 L5 2.2 L14.5 2.2 C16.5 2.2 18 1.6 18 0 Z" fill="currentColor" stroke="var(--card2)" stroke-width="3" paint-order="stroke" stroke-linejoin="round"/></g></svg>
+        <div style="text-align:right"><div class="code">YUL</div><div class="city">Montréal</div></div>
+      </div>
+      <div class="fields">
+        <div><div class="k">Passenger</div><div class="v">Ali Iftikhar</div></div>
+        <div><div class="k">Class</div><div class="v">PhD</div></div>
+        <div><div class="k">Gate</div><div class="v">Human Genetics</div></div>
+        <div><div class="k">Seat</div><div class="v">Rabbani lab</div></div>
+      </div>
+    </div>
+    <div class="stub">
+      <div class="hand">boarded<br>2025</div>
+      <div class="bars" id="bars" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <svg class="stamp a" viewBox="0 0 140 140" aria-label="McGill stamp">
+      <defs><path id="ringA" d="M70 70 m-50 0 a50 50 0 1 1 100 0 a50 50 0 1 1 -100 0"/></defs>
+      <circle cx="70" cy="70" r="64" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="70" cy="70" r="40" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <text font-family="Inter,sans-serif" font-size="11" font-weight="500" letter-spacing="2.2" fill="currentColor"><textPath href="#ringA">McGILL UNIVERSITY · MONTRÉAL · QC ·</textPath></text>
+      <text x="70" y="68" text-anchor="middle" font-family="Gochi Hand,cursive" font-size="22" fill="currentColor">McGill</text>
+      <text x="70" y="88" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="500" letter-spacing="2" fill="currentColor">2025</text>
+    </svg>
+    <div>
+      <div class="when">now</div>
+      <div class="entry"><div class="t">PhD, Human Genetics</div><div class="y">2025 to now · McGill University</div><p>In Dr. Shafaat Rabbani's lab at the Research Institute of the MUHC.</p></div>
+      <div class="entry"><div class="t">PhD researcher</div><div class="y">Research Institute of the MUHC</div><p>Multi-omics pipelines for RNA-seq, EPICv2 methylation, and single-cell data. Drug synergy scoring. Deep learning for IHC and microscopy images. Snakemake workflows on the cluster, so every result can be rebuilt from scratch.</p></div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <svg class="stamp b" viewBox="0 0 140 140" aria-label="LUMS stamp">
+      <defs><path id="ringB" d="M70 70 m-50 0 a50 50 0 1 1 100 0 a50 50 0 1 1 -100 0"/></defs>
+      <rect x="8" y="8" width="124" height="124" rx="18" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="70" cy="70" r="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 4"/>
+      <text font-family="Inter,sans-serif" font-size="9.6" font-weight="500" letter-spacing="1.3" fill="currentColor"><textPath href="#ringB">LAHORE UNIVERSITY OF MANAGEMENT SCIENCES ·</textPath></text>
+      <text x="70" y="68" text-anchor="middle" font-family="Gochi Hand,cursive" font-size="24" fill="currentColor">LUMS</text>
+      <text x="70" y="88" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="500" letter-spacing="2" fill="currentColor">2021</text>
+    </svg>
+    <div>
+      <div class="when">before</div>
+      <div class="entry"><div class="t">Research associate, Cancer Therapeutics Lab</div><div class="y">2023 to 2025 · LUMS</div><p>Built high-throughput screens for compound libraries. Characterized a new MST2 inhibitor for ER-positive cancers, found FLT3 and ABL kinase inhibitors in an in-house library, and hunted for molecular glues and PROTACs among approved drugs.</p></div>
+      <div class="entry"><div class="t">MS, Biology</div><div class="y">2021 to 2023 · LUMS</div><p>Thesis: a high-throughput screen for inhibitors that overcome the spindle assembly checkpoint.</p></div>
+    </div>
+  </div>
+
+  <div class="section two">
+    <div class="card tape tilt-l teach">
+      <div class="two"><div style="grid-column:1/-1"><div class="t2" style="font-family:var(--hand);color:var(--marker);font-size:22px;margin:0">Teaching</div></div></div>
+      <ul>
+        <li>TA, Techniques in Molecular and Cell Biology (BIO500)</li>
+        <li>TA, Advanced Biochemistry (BIO512)</li>
+        <li>Ran a hands-on cell culture workshop, 2023</li>
+        <li>Ran "Mastering DNA basics," 2023</li>
+        <li>Ran a genetics and genomics workshop, 2022</li>
+      </ul>
+    </div>
+    <div class="card tape tilt-r teach">
+      <div style="font-family:var(--hand);color:var(--marker);font-size:22px">Also</div>
+      <ul>
+        <li>First-author review on uPAR in <i>Cancers</i></li>
+        <li>Twelve publications across cancer biology, med chem, and genetics</li>
+        <li>Moved over 10,000 km for a PhD and bought the good boots</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="label">Toolkit</p>
+  <div class="two section">
+    <div><div class="t2">at the bench</div><div class="dymos" id="dBench"></div></div>
+    <div><div class="t2">in code</div><div class="dymos" id="dCode"></div></div>
+  </div>
+</section>
+
+<!-- ================= TOOLS ================= -->
+<section class="page" id="tools">
+  <div class="head">
+    <h1>Bench tools</h1><span class="scrawl">made for my own bench, shared</span>
+    <p>The calculators I kept rebuilding in Excel. Pick one off the shelf.</p>
+  </div>
+  <div class="bench" role="tablist" id="bench">
+    <button class="chip" role="tab" aria-pressed="true" data-tool="qpcr" style="text-transform:none;letter-spacing:.04em">qPCR</button>
+    <button class="chip" role="tab" aria-pressed="false" data-tool="mol">Molarity</button>
+    <button class="chip" role="tab" aria-pressed="false" data-tool="dil">Dilution</button>
+    <button class="chip" role="tab" aria-pressed="false" data-tool="seed">Cell seeding</button>
+    <button class="chip" role="tab" aria-pressed="false" data-tool="spin">Spin speed</button>
+    <button class="chip" role="tab" aria-pressed="false" data-tool="dbl">Doubling time</button>
+    <button class="chip" role="tab" aria-pressed="false" data-tool="lig">Ligation</button>
+    <button class="chip" role="tab" aria-pressed="false" data-tool="br">Bradford</button>
+    <button class="chip" role="tab" aria-pressed="false" data-tool="wb">Western loading</button>
+    <button class="chip" role="tab" aria-pressed="false" data-tool="tv">Tumor volume</button>
+  </div>
+
+  <!-- qPCR -->
+  <div class="tool on" id="t-qpcr"><div class="card tape">
+    <h2>qPCR fold change</h2>
+    <p class="sub">Type your Ct values and watch the ΔΔCt math happen. Quick mode is one control vs one treatment. Table mode takes a whole run, with biological replicates, many genes, or a file.</p>
+    <div class="seg" id="qMode"><button aria-pressed="true" data-m="quick">Quick</button><button aria-pressed="false" data-m="table">Table</button></div>
+
+    <div id="qQuick">
+      <div class="sheet">
+        <div></div>
+        <div class="hd">Target gene<input id="qT" value="KLF4" aria-label="Target gene name"></div>
+        <div class="hd">Reference gene<input id="qR" value="ACTB" aria-label="Reference gene name"></div>
+        <div class="rl"><input id="qC" value="Control" aria-label="Control group name"></div>
+        <input class="ct" id="qCT" inputmode="decimal" value="25.1 25.2 25.3" aria-label="Control target Ct values">
+        <input class="ct" id="qCR" inputmode="decimal" value="18.0 18.2 18.1" aria-label="Control reference Ct values">
+        <div class="rl"><input id="qX" value="Treated" aria-label="Treated group name"></div>
+        <input class="ct" id="qXT" inputmode="decimal" value="23.0 23.3 22.9" aria-label="Treated target Ct values">
+        <input class="ct" id="qXR" inputmode="decimal" value="18.1 18.2 18.0" aria-label="Treated reference Ct values">
+      </div>
+      <p class="hint">One Ct per box, or several technical replicates separated by spaces. Rename the genes and groups by typing over them.</p>
+      <p class="msg" id="qMsg"></p>
+      <div class="result" id="qOut">
+        <div class="post">
+          <div class="big" id="qFold">–</div>
+          <div class="say" id="qSay"></div>
+          <svg id="qBars" viewBox="0 0 220 96" aria-hidden="true"></svg>
+        </div>
+        <div class="work" id="qWork"></div>
+      </div>
+      <div class="warn" id="qWarn" hidden></div>
+    <div class="row io"><button class="btn ghost" data-save="qq">Save as Excel</button><span class="btn ghost file">Open Excel or CSV<input type="file" data-open="qq" accept=".xlsx,.csv,.tsv,.txt"></span><p class="hint">Table mode has its own import and export for full runs.</p></div>
+    <p class="msg" id="qqIo"></p>
+    </div>
+
+    <div id="qTable" hidden>
+      <div class="drop" id="drop">
+        <div class="edit"><table><thead><tr><th>Sample</th><th>Group</th><th>Gene</th><th>Ct</th><th></th></tr></thead><tbody id="grid"></tbody></table></div>
+      </div>
+      <div class="row">
+        <button class="btn ghost" id="addRow">+ Add row</button>
+        <span class="btn ghost file">Import .xlsx or .csv<input type="file" id="file" accept=".xlsx,.csv,.tsv,.txt"></span>
+        <button class="btn ghost" id="exampleBtn">Example</button>
+        <button class="btn ghost" id="clearBtn">Clear</button>
+      </div>
+      <p class="hint">Click any cell and paste straight from Excel, it fills downward and adds rows. You can also drop a file on the table. Same sample name, same biological replicate.</p>
+      <div class="grid g4 opts">
+        <label class="f">Reference gene<select id="ref"></select></label>
+        <label class="f">Calibrator group<select id="cal"></select></label>
+        <label class="f">Target efficiency (%)<input id="effT" type="number" inputmode="decimal" value="100" step="any"></label>
+        <label class="f">Reference efficiency (%)<input id="effR" type="number" inputmode="decimal" value="100" step="any"></label>
+      </div>
+      <p class="msg" id="runMsg"></p>
+      <div id="results" hidden>
+        <div id="chart"></div>
+        <div class="tbl"><table><thead><tr><th>Gene</th><th>Group</th><th>n</th><th>Mean ΔCt</th><th>ΔΔCt</th><th>Fold change</th><th>SD ΔCt</th></tr></thead><tbody id="sumBody"></tbody></table></div>
+        <div class="warn" id="qc"></div>
+        <details><summary>Per-sample math</summary>
+          <div class="tbl"><table><thead><tr><th>Sample</th><th>Group</th><th>Gene</th><th>Target Ct</th><th>Ref Ct</th><th>ΔCt</th><th>Fold</th></tr></thead><tbody id="sampBody"></tbody></table></div>
+        </details>
+        <div class="row">
+          <button class="btn" id="xlsx">Save Excel</button>
+          <button class="btn ghost" id="csv">Save CSV</button>
+          <button class="btn ghost" id="copy">Copy table</button>
+        </div>
+      </div>
+    </div>
+    <details id="qEff"><summary>Primer efficiency</summary>
+      <div class="grid" style="margin-top:12px"><label class="f">Target efficiency (%)<input id="qET" type="number" inputmode="decimal" value="100" step="any"></label><label class="f">Reference efficiency (%)<input id="qER" type="number" inputmode="decimal" value="100" step="any"></label></div>
+    </details>
+    <p class="formula">At 100% efficiency this is the standard 2<sup>−ΔΔCt</sup> method. Other efficiencies weight each Ct by log<sub>2</sub>(E), which gives the Pfaffl ratio. Technical replicates are averaged first; biological replicates set n and SD. No statistical test is run.</p>
+  </div></div>
+
+  <!-- Molarity -->
+  <div class="tool" id="t-mol"><div class="card tape">
+    <h2>Molarity</h2>
+    <p class="sub">How much powder to weigh, or what concentration you just made.</p>
+    <div class="seg" id="molMode"><button aria-pressed="true" data-m="mass">Mass to weigh</button><button aria-pressed="false" data-m="conc">Concentration</button></div>
+    <div class="grid g3">
+      <label class="f">Molecular weight (g/mol)<input id="mw" type="number" inputmode="decimal" step="any" value="350.4"></label>
+      <label class="f">Final volume (mL)<input id="vol" type="number" inputmode="decimal" step="any" value="1"></label>
+      <label class="f" id="fConc">Concentration (mM)<input id="mm" type="number" inputmode="decimal" step="any" value="10"></label>
+      <label class="f" id="fMass" hidden>Mass weighed (mg)<input id="mg" type="number" inputmode="decimal" step="any" value="3.5"></label>
+    </div>
+    <div class="result" id="molRes"><div class="post"><div class="big" id="molBig">–</div><div class="say" id="molSay">fill in the boxes</div></div><div class="work" id="molWork"></div></div>
+    <p class="formula">Use the molecular weight of the exact salt and hydrate on your vial.</p>
+    <div class="row io"><button class="btn ghost" data-save="mol">Save as Excel</button><span class="btn ghost file">Open Excel or CSV<input type="file" data-open="mol" accept=".xlsx,.csv,.tsv,.txt"></span></div>
+    <p class="msg" id="molIo"></p>
+  </div></div>
+
+  <!-- Dilution -->
+  <div class="tool" id="t-dil"><div class="card tape">
+    <h2>Dilution</h2>
+    <p class="sub">One dilution with C₁V₁ = C₂V₂, or a whole serial series.</p>
+    <div class="seg" id="dilMode"><button aria-pressed="true" data-m="one">Single</button><button aria-pressed="false" data-m="ser">Serial</button></div>
+    <div id="dOne" class="grid g3">
+      <label class="f">Stock concentration<input id="c1" type="number" inputmode="decimal" step="any" value="10"></label>
+      <label class="f">Final concentration<input id="c2" type="number" inputmode="decimal" step="any" value="1"></label>
+      <label class="f">Final volume (µL)<input id="v2" type="number" inputmode="decimal" step="any" value="1000"></label>
+    </div>
+    <div id="dSer" class="grid g4" hidden>
+      <label class="f">Starting concentration<input id="s0" type="number" inputmode="decimal" step="any" value="100"></label>
+      <label class="f">Dilution factor<input id="sf" type="number" inputmode="decimal" step="any" value="2"></label>
+      <label class="f">Number of tubes<input id="sN" type="number" inputmode="numeric" step="1" value="6"></label>
+      <label class="f">Volume per tube (µL)<input id="sV" type="number" inputmode="decimal" step="any" value="100"></label>
+    </div>
+    <div class="result" id="dilRes"><div class="post"><div class="big" id="dilBig">–</div><div class="say" id="dilSay">fill in the boxes</div></div><div class="work" id="dilWork"></div></div>
+    <div class="viz" id="dilViz"></div>
+    <p class="formula">Keep stock and final in the same unit. For a serial series, each tube gets diluent first, then you carry the transfer volume from the tube before it and mix.</p>
+    <div class="row io"><button class="btn ghost" data-save="dil">Save as Excel</button><span class="btn ghost file">Open Excel or CSV<input type="file" data-open="dil" accept=".xlsx,.csv,.tsv,.txt"></span></div>
+    <p class="msg" id="dilIo"></p>
+  </div></div>
+
+  <!-- Seeding -->
+  <div class="tool" id="t-seed"><div class="card tape">
+    <h2>Cell seeding</h2>
+    <p class="sub">How much cell suspension and medium to mix, with a little extra for pipetting loss.</p>
+    <div class="grid g3">
+      <label class="f">Plate<select id="sp"><option value="96">96-well</option><option value="48">48-well</option><option value="24">24-well</option><option value="12">12-well</option><option value="6" selected>6-well</option></select></label>
+      <label class="f">Wells to seed<input id="sn" type="number" inputmode="numeric" step="1" value="6"></label>
+      <label class="f">Volume per well (µL)<input id="sv" type="number" inputmode="decimal" step="any" value="2000"></label>
+      <label class="f">Counted cells per mL<input id="sc" type="number" inputmode="decimal" step="any" value="1200000"></label>
+      <label class="f">Cells per well<input id="sw" type="number" inputmode="decimal" step="any" value="300000"></label>
+      <label class="f">Extra (%)<input id="sx" type="number" inputmode="decimal" step="any" value="10"></label>
+    </div>
+    <div class="plate" id="plate" aria-hidden="true"></div>
+    <div class="result" id="seedRes"><div class="post"><div class="big" id="seedBig">–</div><div class="say" id="seedSay">fill in the boxes</div></div><div class="work" id="seedWork"></div></div>
+    <div class="row io"><button class="btn ghost" data-save="seed">Save as Excel</button><span class="btn ghost file">Open Excel or CSV<input type="file" data-open="seed" accept=".xlsx,.csv,.tsv,.txt"></span></div>
+    <p class="msg" id="seedIo"></p>
+  </div></div>
+
+  <!-- Spin -->
+  <div class="tool" id="t-spin"><div class="card tape">
+    <h2>Spin speed</h2>
+    <p class="sub">Protocols say × g, centrifuges say rpm. The rotor radius connects them; it's printed on the rotor or in the manual.</p>
+    <div class="seg" id="spinMode"><button aria-pressed="true" data-m="g">× g to rpm</button><button aria-pressed="false" data-m="rpm">rpm to × g</button></div>
+    <div class="grid">
+      <label class="f" id="fSpin">Force (× g)<input id="spinIn" type="number" inputmode="decimal" step="any" value="300"></label>
+      <label class="f">Rotor radius (cm)<input id="rad" type="number" inputmode="decimal" step="any" value="8.4"></label>
+    </div>
+    <div class="result" id="spinRes"><div class="post"><div class="big" id="spinBig">–</div><div class="say" id="spinSay">fill in the boxes</div></div><div class="work" id="spinWork"></div></div>
+    <div class="row io"><button class="btn ghost" data-save="spin">Save as Excel</button><span class="btn ghost file">Open Excel or CSV<input type="file" data-open="spin" accept=".xlsx,.csv,.tsv,.txt"></span></div>
+    <p class="msg" id="spinIo"></p>
+  </div></div>
+
+  <!-- Doubling -->
+  <div class="tool" id="t-dbl"><div class="card tape">
+    <h2>Doubling time</h2>
+    <p class="sub">Two counts and the hours between them. Best taken while the cells are in log phase.</p>
+    <div class="grid g3">
+      <label class="f">First count<input id="n0" type="number" inputmode="decimal" step="any" value="100000"></label>
+      <label class="f">Second count<input id="n1" type="number" inputmode="decimal" step="any" value="400000"></label>
+      <label class="f">Hours between<input id="dh" type="number" inputmode="decimal" step="any" value="48"></label>
+    </div>
+    <div class="result" id="dblRes"><div class="post"><div class="big" id="dblBig">–</div><div class="say" id="dblSay">fill in the boxes</div></div><div class="work" id="dblWork"></div></div>
+    <div class="row io"><button class="btn ghost" data-save="dbl">Save as Excel</button><span class="btn ghost file">Open Excel or CSV<input type="file" data-open="dbl" accept=".xlsx,.csv,.tsv,.txt"></span></div>
+    <p class="msg" id="dblIo"></p>
+  </div></div>
+
+  <!-- Ligation -->
+  <div class="tool" id="t-lig"><div class="card tape">
+    <h2>Ligation</h2>
+    <p class="sub">How much insert to add for a given insert to vector molar ratio.</p>
+    <div class="grid g4">
+      <label class="f">Vector (ng)<input id="lv" type="number" inputmode="decimal" step="any" value="50"></label>
+      <label class="f">Vector length (bp)<input id="lvb" type="number" inputmode="decimal" step="any" value="5400"></label>
+      <label class="f">Insert length (bp)<input id="lib" type="number" inputmode="decimal" step="any" value="1200"></label>
+      <label class="f">Insert : vector<input id="lr" type="number" inputmode="decimal" step="any" value="3"></label>
+    </div>
+    <div class="result" id="ligRes"><div class="post"><div class="big" id="ligBig">–</div><div class="say" id="ligSay">fill in the boxes</div></div><div class="work" id="ligWork"></div></div>
+    <div class="row io"><button class="btn ghost" data-save="lig">Save as Excel</button><span class="btn ghost file">Open Excel or CSV<input type="file" data-open="lig" accept=".xlsx,.csv,.tsv,.txt"></span></div>
+    <p class="msg" id="ligIo"></p>
+  </div></div>
+
+  <!-- Bradford -->
+  <div class="tool" id="t-br"><div class="card tape">
+    <h2>Bradford</h2>
+    <p class="sub">Standard curve to protein concentration, then how much lysate and buffer to bring every sample to the same amount. The standards are the BSA curve from my own lab sheet; replace them with yours.</p>
+    <div class="grid g3">
+      <label class="f">Standards unit<select id="brU"><option value="1" selected>µg/µL (mg/mL)</option><option value="0.001">µg/mL</option></select></label>
+      <label class="f">Blank OD (optional)<input id="brBlank" type="number" inputmode="decimal" step="any" value="0"></label>
+      <label class="f">Sample dilution factor<input id="brDil" type="number" inputmode="decimal" step="any" value="1"></label>
+      <label class="f">Protein per sample (µg)<input id="brUg" type="number" inputmode="decimal" step="any" value="15"></label>
+      <label class="f">Final volume (µL)<input id="brV" type="number" inputmode="decimal" step="any" value="60"></label>
+    </div>
+    <div class="edit two-col" style="margin-top:16px">
+      <div><table><thead><tr><th>BSA standard</th><th>OD 595</th><th></th></tr></thead><tbody id="brStd"></tbody></table></div>
+      <div><table><thead><tr><th>Sample</th><th>OD rep 1</th><th>OD rep 2</th><th></th></tr></thead><tbody id="brGrid"></tbody></table></div>
+    </div>
+    <div class="row"><button class="btn ghost" id="brAddStd">+ Standard</button><button class="btn ghost" id="brAdd">+ Sample</button><button class="btn ghost" id="brToWb">Send to Western loading</button></div>
+    <div class="result" id="brRes"><div class="post"><div class="big" id="brBig">–</div><div class="say" id="brSay">fill in the boxes</div><svg class="std" id="brViz" viewBox="0 0 220 120" aria-hidden="true"></svg></div><div class="work" id="brWork"></div></div>
+    <div class="tbl wbt"><table><thead><tr><th>Sample</th><th>Mean OD</th><th>Protein (µg/µL)</th><th>Lysate</th><th>Lysis buffer</th></tr></thead><tbody id="brBody"></tbody></table></div>
+    <p class="formula">Fits OD = slope × concentration + intercept by least squares, then reads each sample back off the line. Samples outside the standard range are flagged, because the curve is only trusted between its first and last standard.</p>
+    <div class="row io"><button class="btn ghost" data-save="br">Save as Excel</button><span class="btn ghost file">Open Excel or CSV<input type="file" data-open="br" accept=".xlsx,.csv,.tsv,.txt"></span><p class="hint">Opens a sheet with Sample, OD columns, or a standards sheet with BSA and OD columns.</p></div>
+    <p class="msg" id="brIo"></p>
+  </div></div>
+
+  <!-- Western -->
+  <div class="tool" id="t-wb"><div class="card tape">
+    <h2>Western loading</h2>
+    <p class="sub">Equal protein in every lane. Type your BCA or Bradford concentrations and get lysate, loading buffer, and water per lane.</p>
+    <div class="grid g3">
+      <label class="f">Protein per lane (µg)<input id="wbUg" type="number" inputmode="decimal" step="any" value="20"></label>
+      <label class="f">Final volume per lane (µL)<input id="wbV" type="number" inputmode="decimal" step="any" value="20"></label>
+      <label class="f">Loading buffer<select id="wbX"><option value="4" selected>4×</option><option value="6">6×</option><option value="5">5×</option><option value="2">2×</option></select></label>
+    </div>
+    <div class="edit" style="margin-top:16px"><table><thead><tr><th>Sample</th><th>Protein (µg/µL)</th><th></th></tr></thead><tbody id="wbGrid"></tbody></table></div>
+    <div class="row"><button class="btn ghost" id="wbAdd">+ Add sample</button></div>
+    <div class="result" id="wbRes"><div class="post"><div class="big" id="wbBig">–</div><div class="say" id="wbSay">fill in the boxes</div><svg class="gel" id="wbViz" viewBox="0 0 220 92" aria-hidden="true"></svg></div><div class="work" id="wbWork"></div></div>
+    <div class="tbl wbt"><table><thead><tr><th>Sample</th><th>Lysate</th><th>Buffer</th><th>Water</th><th>Total</th></tr></thead><tbody id="wbBody"></tbody></table></div>
+    <div class="row io"><button class="btn ghost" data-save="wb">Save as Excel</button><span class="btn ghost file">Open Excel or CSV<input type="file" data-open="wb" accept=".xlsx,.csv,.tsv,.txt"></span><p class="hint">Opens a sheet with Sample and Protein (µg/µL) columns, like a BCA or Bradford export.</p></div>
+    <p class="msg" id="wbIo"></p>
+  </div></div>
+
+  <!-- Tumor volume -->
+  <div class="tool" id="t-tv"><div class="card tape">
+    <h2>Tumor volume</h2>
+    <p class="sub">Caliper measurements to volume, one tumor over time. Length is the longest diameter; width is perpendicular to it.</p>
+    <div class="edit"><table><thead><tr><th>Day</th><th>Length (mm)</th><th>Width (mm)</th><th>Volume (mm³)</th><th></th></tr></thead><tbody id="tvGrid"></tbody></table></div>
+    <div class="row"><button class="btn ghost" id="tvAdd">+ Add day</button></div>
+    <div class="result" id="tvRes"><div class="post"><div class="big" id="tvBig">–</div><div class="say" id="tvSay">fill in the boxes</div><svg class="curve" id="tvViz" viewBox="0 0 220 110" aria-hidden="true"></svg></div><div class="work" id="tvWork"></div></div>
+    <p class="formula">V = length × width² ÷ 2, the modified ellipsoid formula used for caliper measurements. Doubling time assumes exponential growth between the first and last day.</p>
+    <div class="row io"><button class="btn ghost" data-save="tv">Save as Excel</button><span class="btn ghost file">Open Excel or CSV<input type="file" data-open="tv" accept=".xlsx,.csv,.tsv,.txt"></span><p class="hint">Opens a sheet with Day, Length, and Width columns.</p></div>
+    <p class="msg" id="tvIo"></p>
+  </div></div>
+</section>
+
+<!-- ================= NOTES ================= -->
+<section class="page" id="notes">
+  <div class="head">
+    <h1>Notes</h1><span class="scrawl">so I stop relearning them</span>
+  </div>
+  <article class="paper">
+    <span class="date">Sept 2026</span>
+    <h3>On westerns</h3>
+    <p>Load control first, argue later. If the loading control is ugly, <s>the blot is fine</s> the blot is not fine.</p>
+    <p>Crop <mark>after</mark> you've saved the full membrane. Always.</p>
+  </article>
+  <article class="paper">
+    <span class="date">Sept 2026</span>
+    <h3>On negative results</h3>
+    <p>A clean "nothing happened" is still data. Write it up the same day, with the same care, or you will run it again in six months and <mark>act surprised</mark>.</p>
+  </article>
+  <article class="paper">
+    <span class="date">Aug 2026</span>
+    <h3>On code for biologists</h3>
+    <p>If I can't rebuild a figure from the raw files with one command, I don't trust it.</p>
+    <p>Future me is the <s>nicest</s> most annoying reviewer I'll ever have.</p>
+  </article>
+  <article class="paper">
+    <span class="date">Aug 2026</span>
+    <h3>On moving countries for a PhD</h3>
+    <p>Lahore to Montreal is a long way. Some weeks it feels longer.</p>
+    <p>Buy the good boots in October, not January. Call home before the lab eats the evening.</p>
+  </article>
+  <article class="paper">
+    <span class="date">July 2026</span>
+    <h3>On teaching</h3>
+    <p>Running workshops taught me more than taking the courses did. You find out fast which parts you only <mark>thought</mark> you understood.</p>
+  </article>
+  <article class="paper">
+    <span class="date">July 2026</span>
+    <h3>On asking</h3>
+    <p>The question you're embarrassed to ask in lab meeting is the one three other people are sitting on too. Ask it.</p>
+  </article>
+</section>
+
+<footer class="foot"><span>© <span id="yr"></span> Ali Iftikhar</span><span>Montreal</span></footer>
+</div>
+
+<script>
+'use strict';
+/* ====== Edit your links here ====== */
+const LINKS = [
+  ['Instagram','https://instagram.com/ali.ift'],
+  ['X','https://x.com/aliiftx'],
+  ['LinkedIn','https://www.linkedin.com/in/aliift/'],
+  ['Google Scholar','https://scholar.google.com/citations?user=534npOYAAAAJ'],
+  ['ResearchGate','https://www.researchgate.net/profile/Ali-Iftikhar-8'],
+  ['Email','mailto:ali.iftikhar.ah@gmail.com'],
+  // Add more when ready, e.g. ['GitHub','https://github.com/yourhandle'], ['ORCID','https://orcid.org/...'],
+];
+/* ====== Papers: [year, title, authors, journal, link or '', filters, margin note] ====== */
+const PAPERS = [
+  ['2026','A potent small-chemical MBD2 inhibitor, KCC-07, induces selective cytotoxicity in hepatocellular and prostate cancer cells','Koca KK, Akçay ZN, Kugu G, et al., *Iftikhar A*, Rabbani SA, Çalışkaner ZO','Molecular Biology Reports','https://doi.org/10.1007/s11033-026-12325-5','cancer',''],
+  ['2026','Structure-guided design of benzothiazole and benzimidazole-based urea derivatives curtailing oncogenic signaling via concurrent inhibition of VEGFR-2, EGFR, and c-Met','Shaheen S, Siddique A, *Iftikhar A*, et al.','ACS Omega','','chem',''],
+  ['2026','Nickel and cobalt based-octahedral complexes of N-alkylated imidazole for biological and photocatalytic applications','Zia SU, Jamil F, Nadeem H, et al., *Iftikhar A*','Inorganic Chemistry Communications','','chem',''],
+  ['2025','The urokinase-type plasminogen activator receptor (uPAR) as a mediator of physiological and pathological processes: potential therapeutic strategies','*Iftikhar A*, Mahmood N, Rabbani SA','Cancers','https://doi.org/10.3390/cancers17203309','cancer','first author!'],
+  ['2025','Bicyclic 2-aminopyrimidine derivatives as potent VEGFR-2 inhibitors and apoptosis inducers','Siddique A, Shaheen S, *Iftikhar A*, et al.','European Journal of Medicinal Chemistry','','chem cancer',''],
+  ['2025','Carbothioamides as anticancer agents: synthesis, in-vitro activity, structure-activity relationship evaluations and molecular docking','Ali B, Riaz M, Khan A, et al., *Iftikhar A*','Results in Chemistry','','chem',''],
+  ['2025','Synthesis, mechanistic insights, and anticancer evaluation of novel 2-aroylbenzo[b]thiophen-3-ols','Mukhtar A, *Iftikhar A*, Maqbool M, et al.','Journal of Molecular Structure','','chem cancer',''],
+  ['2023','Mathematical understanding of sequence alignment and phylogenetic algorithms','Saif R, Nadeem S, Khaliq A, Zia S, *Iftekhar A*','Advancements in Life Sciences','','comp',''],
+  ['2022','Computational prediction of Cassia angustifolia compounds as potential drug agents against main protease of SARS-nCov2','Saif R, Ashfaq K, Ali G, *Iftekhar A*, et al.','Advancements in Life Sciences','','comp',''],
+  ['2022','Bioinformatics: multi-omics applications in food science','*Iftekhar A* (co-author)','Book','https://www.researchgate.net/publication/360545445_Bioinformatics_Multi-Omics_Applications_in_Food_Science','comp gen',''],
+  ['2020','Dog coat colour genetics: a review','Saif R, *Iftekhar A*, Asif F, Alghanem MS','Advancements in Life Sciences','','gen','yes, dogs'],
+  ['2018','Molecular characterization of EGLN1 gene in fast and slow moving animals of diverse terrain','Saif R, Naz N, Tariq B, *Iftekhar A*','Advancements in Life Sciences','','gen','where it started'],
+  ['In review','Epigenetic age acceleration is associated with higher systolic blood pressure in the CanCOLD cohort','*Iftikhar A*, et al. (co-first author)','','','gen comp',''],
+];
+const BENCH = ['CRISPR-Cas9','qRT-PCR','Western blot','SDS-PAGE','Cloning','Cell culture','FACS','Confocal','Kinase assays','ChIP-seq','Mouse models','HTS assays'];
+const CODE = ['R','DESeq2','limma','minfi','ggplot2','Python','PyTorch','scikit-learn','SQL','Snakemake','Docker','Git','Prism','ImageJ','PyMOL','AutoDock'];
+
+const $ = id => document.getElementById(id);
+const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+$('yr').textContent = new Date().getFullYear();
+$('social').innerHTML = LINKS.map(([n,u]) => `<a href="${u}" ${u.startsWith('http')?'target="_blank" rel="noopener"':''}>${n}</a>`).join('');
+const MAIL = (LINKS.find(l=>l[1].startsWith('mailto:'))||[])[1];
+if (MAIL) document.querySelectorAll('a.mailto').forEach(a => { const q = a.getAttribute('href').split('?')[1]; a.href = MAIL + (q ? '?'+q : ''); });
+
+/* ====== Routing ====== */
+const pages = ['home','research','papers','cv','tools','notes'];
+function route(){
+  const p = pages.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'home';
+  document.querySelectorAll('.page').forEach(s => s.classList.toggle('on', s.id === p));
+  document.querySelectorAll('nav .links a').forEach(a => { if (a.getAttribute('href') === '#'+p) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+  document.body.dataset.page = p;
+  document.title = p === 'home' ? 'Ali Iftikhar | Cancer biologist at McGill University' : ({research:'Research',papers:'Papers',cv:'CV',tools:'Bench tools',notes:'Notes'})[p] + ' | Ali Iftikhar';
+  window.scrollTo(0,0);
+}
+addEventListener('hashchange', route); route();
+
+/* ====== Hover words ====== */
+const tip = $('tip');
+document.querySelectorAll('.w').forEach(el => {
+  const show = () => tip.textContent = el.dataset.t, hide = () => tip.innerHTML = '&nbsp;';
+  el.addEventListener('mouseenter', show); el.addEventListener('focus', show);
+  el.addEventListener('mouseleave', hide); el.addEventListener('blur', hide);
+});
+
+/* ====== Dot field ====== */
+(() => {
+  const c = $('field'), ctx = c.getContext('2d');
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W, H, dots = [], mx = -999, my = -999, t = 0;
+  const gap = 24;
+  function size(){
+    const r = devicePixelRatio || 1;
+    W = innerWidth; H = innerHeight;
+    c.width = W*r; c.height = H*r; c.style.width = W+'px'; c.style.height = H+'px';
+    ctx.setTransform(r,0,0,r,0,0);
+    dots = [];
+    for (let y = gap/2; y < H; y += gap) for (let x = gap/2; x < W; x += gap) dots.push({x,y,s:Math.random()});
+  }
+  function draw(){
+    const col = getComputedStyle(document.documentElement).getPropertyValue('--dot').trim();
+    ctx.clearRect(0,0,W,H);
+    const cx = W*0.78, cy = H*0.42, R = Math.min(W,H)*0.55;
+    for (const d of dots){
+      const dist = Math.hypot(d.x-cx, d.y-cy)/R;
+      let o = Math.min(1, Math.max(0, dist-0.18)) * 0.22;
+      if (d.s < Math.max(0, 0.7 - dist)) continue;
+      let x = d.x, y = d.y;
+      const dm = Math.hypot(x-mx, y-my);
+      if (dm < 110 && dm > 0){ const k = (110-dm)/110; x += (x-mx)/dm*k*10; y += (y-my)/dm*k*10; o += k*0.25; }
+      if (!still) y += Math.sin(t/1400 + d.x*0.02)*0.8;
+      ctx.fillStyle = `rgba(${col},${o})`;
+      ctx.beginPath(); ctx.arc(x,y,1.1,0,6.283); ctx.fill();
+    }
+  }
+  function loop(ts){ t = ts; if (document.body.dataset.page === 'home') draw(); if (!still) requestAnimationFrame(loop); }
+  addEventListener('resize', () => { size(); draw(); });
+  addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; if (still) draw(); });
+  size(); draw(); if (!still) requestAnimationFrame(loop);
+})();
+
+/* ====== Papers ====== */
+(() => {
+  const arrow = '<svg viewBox="0 0 44 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M42 10 C 30 16, 16 14, 4 8"/><path d="M4 8 L11 4 M4 8 L10 13"/></svg>';
+  const years = [...new Set(PAPERS.map(p=>p[0]))];
+  $('publist').innerHTML = years.map(y => `<div class="yr" data-y="${esc(y)}"><div class="n">${esc(y)}</div><div>${
+    PAPERS.filter(p=>p[0]===y).map(([,t,a,j,url,f,m]) => {
+      const href = url || 'https://scholar.google.com/scholar?q=' + encodeURIComponent('"'+t+'"');
+      const au = esc(a).replace(/\*(.+?)\*/g,'<b class="hl">$1</b>');
+      const title = y === 'In review' ? `<span class="t">${esc(t)}</span>` : `<a class="t" href="${href}" target="_blank" rel="noopener">${esc(t)}</a>`;
+      return `<div class="pub" data-f="${f}">${title}<div class="d">${au}${j?` · <i>${esc(j)}</i>`:''}</div>${m?`<div class="m">${arrow}${esc(m)}</div>`:''}</div>`;
+    }).join('')}</div></div>`).join('');
+  document.querySelectorAll('#chips .chip').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('#chips .chip').forEach(x => x.setAttribute('aria-pressed', x === b));
+    const f = b.dataset.f;
+    document.querySelectorAll('.pub').forEach(p => p.classList.toggle('hide', f !== 'all' && !p.dataset.f.split(' ').includes(f)));
+    document.querySelectorAll('.yr').forEach(y => y.classList.toggle('hide', !y.querySelector('.pub:not(.hide)')));
+  }));
+})();
+
+/* ====== Research: plain words ====== */
+seg('momSeg', m => { document.body.classList.toggle('plainmode', m === 'plain'); $('momNote').textContent = m === 'plain' ? 'hi mom' : ''; });
+
+/* ====== CV bits ====== */
+$('dBench').innerHTML = BENCH.map(s=>`<span class="dymo">${esc(s)}</span>`).join('');
+$('dCode').innerHTML = CODE.map(s=>`<span class="dymo">${esc(s)}</span>`).join('');
+$('bars').innerHTML = Array.from({length:30},(_,i)=>`<i style="width:${[1,2,1,3,1,2,2,1,3,1][ (i*7)%10 ]}px"></i>`).join('');
+
+/* ====== Helpers ====== */
+const num = id => parseFloat($(id).value);
+const pos = x => Number.isFinite(x) && x > 0;
+const fmt = (v,d=4) => v == null || !Number.isFinite(v) ? '–' : Number(v).toLocaleString('en-US',{maximumSignificantDigits:d});
+const fx = (v,d=2) => Number.isFinite(v) ? v.toFixed(d) : '–';
+const mean = a => a.reduce((x,y)=>x+y,0)/a.length;
+const sd = a => a.length < 2 ? null : Math.sqrt(a.reduce((s,x)=>s+(x-mean(a))**2,0)/(a.length-1));
+const vol = uL => uL >= 1000 ? fmt(uL/1000,4)+' mL' : fmt(uL,4)+' µL';
+function seg(id, cb){ const g = $(id); g.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { g.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b)); cb(b.dataset.m); })); }
+function watch(ids, fn){ ids.forEach(i => $(i).addEventListener('input', fn)); }
+
+/* ====== Tool shelf ====== */
+document.querySelectorAll('#bench .chip').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('#bench .chip').forEach(x => x.setAttribute('aria-pressed', x === b));
+  document.querySelectorAll('.tool').forEach(t => t.classList.toggle('on', t.id === 't-'+b.dataset.tool));
+}));
+
+/* ====== qPCR: quick ====== */
+const cts = s => String(s).trim().split(/[\s,;]+/).filter(Boolean).map(x => Number(x));
+function quick(){
+  const warn = [];
+  try{
+    const names = {t:$('qT').value.trim()||'target', r:$('qR').value.trim()||'reference', c:$('qC').value.trim()||'control', x:$('qX').value.trim()||'treated'};
+    const v = {};
+    for (const k of ['CT','CR','XT','XR']){
+      const arr = cts($('q'+k).value);
+      if (!arr.length) throw new Error('Fill in all four Ct boxes.');
+      if (arr.some(n => !Number.isFinite(n) || n <= 0 || n > 50)) throw new Error('Ct values should be numbers between 0 and 50.');
+      if (arr.some(n => n > 35)) warn.push('Some Ct values are above 35, where quantification gets unreliable.');
+      if (sd(arr) > 0.5) warn.push('A set of technical replicates spreads more than 0.5 cycles.');
+      v[k] = mean(arr);
+    }
+    const eT = 1 + num('qET')/100, eR = 1 + num('qER')/100;
+    if (!(eT > 1.4 && eT < 2.6 && eR > 1.4 && eR < 2.6)) throw new Error('Efficiencies should be between 40% and 160%.');
+    const lT = Math.log2(eT), lR = Math.log2(eR), std = Math.abs(lT-1) < 1e-9 && Math.abs(lR-1) < 1e-9;
+    const dC = v.CT*lT - v.CR*lR, dX = v.XT*lT - v.XR*lR, dd = dX - dC, fc = 2 ** -dd;
+    $('qMsg').textContent = ''; $('qMsg').className = 'msg';
+    $('qFold').innerHTML = `${fmt(fc,3)}<small>×</small>`;
+    $('qSay').textContent = Math.abs(dd) < 0.05 ? `${names.t} barely moves in ${names.x}` : `${names.t} is ${fc > 1 ? 'up' : 'down'} in ${names.x}`;
+    const w = [
+      `<div class="ttl">show your work</div>`,
+      `<div>mean Ct: ${esc(names.t)} ${fx(v.CT)} / ${fx(v.XT)}, ${esc(names.r)} ${fx(v.CR)} / ${fx(v.XR)}</div>`,
+      std ? `<div>ΔCt ${esc(names.c)} = ${fx(v.CT)} − ${fx(v.CR)} = ${fx(dC)}</div>` : `<div>ΔCt ${esc(names.c)} = ${fx(v.CT)}·${fx(lT,3)} − ${fx(v.CR)}·${fx(lR,3)} = ${fx(dC)}</div>`,
+      std ? `<div>ΔCt ${esc(names.x)} = ${fx(v.XT)} − ${fx(v.XR)} = ${fx(dX)}</div>` : `<div>ΔCt ${esc(names.x)} = ${fx(v.XT)}·${fx(lT,3)} − ${fx(v.XR)}·${fx(lR,3)} = ${fx(dX)}</div>`,
+      `<div>ΔΔCt = ${fx(dX)} − ${fx(dC)} = ${fx(dd)}</div>`,
+      `<div class="ans">fold = 2^(${fx(-dd)}) = ${fmt(fc,3)}×</div>`
+    ];
+    $('qWork').innerHTML = w.join('');
+    const h1 = 70, maxv = Math.max(1, fc), b1 = 70/maxv, b2 = 70*fc/maxv;
+    $('qBars').innerHTML = `<path d="M8 84 L212 85" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5"/>`+
+      `<path d="M40 84 L41 ${84-b1} L86 ${83-b1} L86 84" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" opacity=".6"/>`+
+      `<path d="M126 84 L127 ${84-b2} L172 ${83-b2} L172 84" fill="var(--marker)" fill-opacity=".25" stroke="var(--marker)" stroke-width="2.4" stroke-linejoin="round"/>`+
+      `<text x="63" y="96" text-anchor="middle" font-family="Gochi Hand,cursive" font-size="14" fill="currentColor">${esc(names.c)}</text>`+
+      `<text x="149" y="96" text-anchor="middle" font-family="Gochi Hand,cursive" font-size="14" fill="currentColor">${esc(names.x)}</text>`;
+    $('qOut').style.opacity = 1;
+  }catch(e){ $('qMsg').textContent = e.message; $('qMsg').className = 'msg err'; $('qOut').style.opacity = .35; }
+  $('qWarn').hidden = !warn.length; $('qWarn').textContent = [...new Set(warn)].join(' ');
+}
+watch(['qT','qR','qC','qX','qCT','qCR','qXT','qXR','qET','qER'], quick); quick();
+
+let qMode = 'quick';
+seg('qMode', m => { qMode = m; $('qQuick').hidden = m !== 'quick'; $('qTable').hidden = m !== 'table'; $('qEff').hidden = m !== 'quick'; if (m === 'table' && !gridRows().length) loadExample(); });
+
+/* ====== qPCR: table ====== */
+const EXAMPLE = [
+  ['C1','Control','ACTB',18.0],['C1','Control','ACTB',18.2],['C1','Control','KLF4',25.0],['C1','Control','KLF4',25.2],
+  ['C2','Control','ACTB',18.3],['C2','Control','KLF4',25.4],['C3','Control','ACTB',18.1],['C3','Control','KLF4',25.3],
+  ['T1','Treated','ACTB',18.1],['T1','Treated','KLF4',23.0],['T2','Treated','ACTB',18.2],['T2','Treated','KLF4',23.3],
+  ['T3','Treated','ACTB',18.0],['T3','Treated','KLF4',22.9]
+];
+const grid = $('grid');
+function addRow(vals=['','','',''], before=null){
+  const tr = document.createElement('tr');
+  tr.innerHTML = ['Sample','Group','Gene','Ct'].map((h,i)=>`<td${i===3?' class="num"':''}><input aria-label="${h}" ${i===3?'inputmode="decimal"':''} value="${esc(vals[i]??'')}"></td>`).join('') + '<td class="x"><button aria-label="Delete row">×</button></td>';
+  grid.insertBefore(tr, before);
+  return tr;
+}
+function setGrid(rows){ grid.innerHTML=''; rows.forEach(r=>addRow(r)); if (!rows.length) for(let i=0;i<4;i++) addRow(); refreshChoices(); schedule(); }
+function gridRows(){ return [...grid.rows].map(tr => [...tr.querySelectorAll('input')].map(i=>i.value.trim())).filter(r => r.some(Boolean)); }
+function loadExample(){ setGrid(EXAMPLE.map(r=>r.map(String))); }
+$('addRow').addEventListener('click', () => { addRow().querySelector('input').focus(); });
+$('exampleBtn').addEventListener('click', loadExample);
+$('clearBtn').addEventListener('click', () => setGrid([]));
+grid.addEventListener('click', e => { if (e.target.closest('.x button')){ e.target.closest('tr').remove(); if(!grid.rows.length) addRow(); refreshChoices(); schedule(); } });
+grid.addEventListener('input', e => { if (e.target.closest('td') && e.target.closest('td').cellIndex !== 3) refreshChoices(); schedule(); });
+grid.addEventListener('paste', e => {
+  const input = e.target.closest('input'); if (!input) return;
+  const text = (e.clipboardData || window.clipboardData).getData('text');
+  if (!/[\t\n]/.test(text.trim())) return;
+  e.preventDefault();
+  let rows = parseText(text);
+  const hdr = rows[0] && detect(rows[0]);
+  if (hdr && hdr.sample>=0 && hdr.gene>=0 && hdr.ct>=0) rows = rows.slice(1).map(r => [r[hdr.sample], hdr.group>=0 ? r[hdr.group] : '', r[hdr.gene], r[hdr.ct]]);
+  let tr = input.closest('tr'); const c0 = input.closest('td').cellIndex;
+  for (const r of rows){
+    if (!tr) tr = addRow();
+    const ins = tr.querySelectorAll('input');
+    r.forEach((v,j) => { if (ins[c0+j]) ins[c0+j].value = String(v ?? '').trim(); });
+    tr = tr.nextElementSibling;
+  }
+  refreshChoices(); schedule();
+});
+
+const ALIAS = {
+  sample:['sample','samplename','sampleid','biologicalsample','well sample'],
+  group:['group','condition','treatment','experimentalgroup','samplegroup','biogroup','biologicalgroup'],
+  gene:['gene','target','targetname','assay','assayname','targetgene','detector'],
+  ct:['ct','cq','ctvalue','cqvalue','thresholdcycle','quantificationcycle','crt','cqmean']
+};
+const norm = v => String(v ?? '').trim().toLowerCase().replace(/[^a-z0-9]+/g,'');
+function detect(row){ const o={}; for (const k in ALIAS) o[k] = row.findIndex(c => ALIAS[k].includes(norm(c))); return o; }
+function parseDelimited(text, d){
+  const rows=[]; let row=[], cell='', q=false;
+  for (let i=0;i<text.length;i++){
+    const ch=text[i];
+    if (ch==='"'){ if(q && text[i+1]==='"'){cell+='"';i++;} else q=!q; }
+    else if (ch===d && !q){ row.push(cell); cell=''; }
+    else if ((ch==='\n'||ch==='\r') && !q){ if(ch==='\r'&&text[i+1]==='\n')i++; row.push(cell); if(row.some(x=>x.trim()))rows.push(row); row=[]; cell=''; }
+    else cell+=ch;
+  }
+  row.push(cell); if(row.some(x=>x.trim()))rows.push(row);
+  return rows;
+}
+function parseText(text){
+  text = text.replace(/^﻿/,'');
+  const first = text.split(/\r?\n/,1)[0];
+  const d = first.includes('\t') ? '\t' : first.split(';').length > first.split(',').length ? ';' : ',';
+  return parseDelimited(text, d);
+}
+async function parseXlsxAll(buf){
+  if (typeof JSZip === 'undefined') throw new Error('The Excel reader did not load. Check your connection, or save as CSV.');
+  const zip = await JSZip.loadAsync(buf);
+  const P = s => new DOMParser().parseFromString(s,'application/xml');
+  const wb = zip.file('xl/workbook.xml'); if (!wb) throw new Error('That is not a valid .xlsx file.');
+  const sheets = [...P(await wb.async('string')).getElementsByTagName('sheet')];
+  const relF = zip.file('xl/_rels/workbook.xml.rels');
+  const rels = relF ? [...P(await relF.async('string')).getElementsByTagName('Relationship')] : [];
+  const strings = [];
+  const ss = zip.file('xl/sharedStrings.xml');
+  if (ss) for (const si of P(await ss.async('string')).getElementsByTagName('si')) strings.push([...si.getElementsByTagName('t')].map(t=>t.textContent).join(''));
+  const all = [];
+  for (let n = 0; n < sheets.length; n++){
+    const sh = sheets[n], rid = sh.getAttribute('r:id');
+    let path = `xl/worksheets/sheet${n+1}.xml`;
+    const rel = rels.find(r=>r.getAttribute('Id')===rid);
+    if (rel){ const t = rel.getAttribute('Target'); path = t.startsWith('/') ? t.slice(1) : 'xl/'+t.replace(/^\.\//,''); }
+    const file = zip.file(path); if (!file) continue;
+    const out = [];
+    for (const r of P(await file.async('string')).getElementsByTagName('row')){
+      const row = [];
+      for (const c of r.getElementsByTagName('c')){
+        const L = (c.getAttribute('r')||'').match(/^[A-Z]+/i)?.[0] || '';
+        let col = 0; for (const ch of L.toUpperCase()) col = col*26 + ch.charCodeAt(0) - 64;
+        const k = c.getAttribute('t'); let v = c.getElementsByTagName('v')[0]?.textContent ?? '';
+        if (k==='s') v = strings[+v] ?? ''; else if (k==='inlineStr') v = [...c.getElementsByTagName('t')].map(t=>t.textContent).join('');
+        row[L ? col-1 : row.length] = v;
+      }
+      if (row.some(v=>String(v??'').trim())) out.push([...row].map(v=>v??''));
+    }
+    all.push({name: sh.getAttribute('name') || `Sheet ${n+1}`, rows: out});
+  }
+  return all;
+}
+async function parseXlsx(buf){ const all = await parseXlsxAll(buf); return all.length ? all[0].rows : []; }
+function importMatrix(m){
+  let hi=-1, best=null;
+  for (let i=0;i<Math.min(m.length,40);i++){ const d = detect(m[i].map(x=>x??'')); const s = ['sample','gene','ct'].filter(k=>d[k]>=0).length; if (s===3){ hi=i; best=d; break; } }
+  if (hi<0) throw new Error('Could not find columns named Sample, Gene (or Target), and Ct (or Cq).');
+  const rows = m.slice(hi+1).map(r => [r[best.sample], best.group>=0 ? r[best.group] : '', r[best.gene], r[best.ct]].map(v=>String(v??'').trim())).filter(r=>r.some(Boolean));
+  setGrid(rows);
+  return best.group < 0;
+}
+async function readFile(f){
+  if (!f) return;
+  try{
+    if (f.size > 10*1024*1024) throw new Error('That file is over 10 MB.');
+    const n = f.name.toLowerCase();
+    const m = n.endsWith('.xlsx') ? await parseXlsx(await f.arrayBuffer()) : /\.(csv|tsv|txt)$/.test(n) ? parseText(await f.text()) : (()=>{throw new Error('Use .xlsx, .csv, or .tsv.')})();
+    const noGroup = importMatrix(m);
+    if (noGroup) setMsg(`Loaded ${f.name}. No group column found, so type the groups into the table.`, true);
+  }catch(e){ setMsg(e.message, true); }
+}
+$('file').addEventListener('change', e => { readFile(e.target.files[0]); e.target.value=''; });
+const drop = $('drop');
+['dragenter','dragover'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('over');}));
+['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('over');}));
+drop.addEventListener('drop', e => readFile(e.dataTransfer.files[0]));
+
+function refreshChoices(){
+  const rows = gridRows();
+  const genes = [...new Set(rows.map(r=>r[2]).filter(Boolean))], groups = [...new Set(rows.map(r=>r[1]).filter(Boolean))];
+  const keep = (sel, list, guess) => { const cur = sel.value; sel.innerHTML = list.map(x=>`<option>${esc(x)}</option>`).join(''); sel.value = list.includes(cur) ? cur : (guess || list[0] || ''); };
+  keep($('ref'), genes, ['ACTB','GAPDH','RPLP0','HPRT1','18S','B2M','TBP','RPL13A','PPIA','YWHAZ'].map(k=>genes.find(x=>norm(x)===norm(k))).find(Boolean));
+  keep($('cal'), groups, groups.find(x=>/control|ctrl|untreated|vehicle|dmso|scr|shc|nt|baseline|wt/i.test(x)));
+}
+let timer; function schedule(){ clearTimeout(timer); timer = setTimeout(run, 200); }
+['ref','cal','effT','effR'].forEach(i=>$(i).addEventListener('input', schedule));
+function setMsg(t, err){ $('runMsg').textContent = t; $('runMsg').className = 'msg' + (err ? ' err' : ''); }
+
+function analyze(rows){
+  const eT = 1 + num('effT')/100, eR = 1 + num('effR')/100;
+  if (!(eT > 1.4 && eT < 2.6 && eR > 1.4 && eR < 2.6)) throw new Error('Efficiencies should be between 40% and 160%.');
+  const lT = Math.log2(eT), lR = Math.log2(eR);
+  const refK = norm($('ref').value), calK = norm($('cal').value);
+  if (!refK) throw new Error('Add at least a reference gene and a target gene.');
+  const S = new Map(), warn = [], input = []; let skipped = 0;
+  rows.forEach((r,i)=>{
+    const [s,g,ge,raw] = r, line = i+1;
+    if (!s || !g || !ge) throw new Error(`Row ${line} needs a sample, group, and gene.`);
+    if (!raw || /^(undetermined|undet|na|n\/a|nan|no ct|no cq|-)$/i.test(raw)){ skipped++; return; }
+    const ct = Number(raw.replace(',','.'));
+    if (!Number.isFinite(ct) || ct <= 0 || ct > 50) throw new Error(`Row ${line} has a Ct that isn't a number between 0 and 50.`);
+    if (ct > 35) warn.push(`${s} / ${ge}: Ct ${fmt(ct)} is above 35.`);
+    const sk = s.toLowerCase();
+    if (!S.has(sk)) S.set(sk, {s, g, genes:new Map()});
+    const rec = S.get(sk);
+    if (norm(rec.g) !== norm(g)) throw new Error(`Sample ${s} is listed in two groups.`);
+    const gk = norm(ge); if (!rec.genes.has(gk)) rec.genes.set(gk, {ge, cts:[]});
+    rec.genes.get(gk).cts.push(ct); input.push([s,g,ge,ct]);
+  });
+  if (!S.size) throw new Error('No Ct values yet.');
+  const samples = [];
+  for (const rec of S.values()){
+    const ref = rec.genes.get(refK);
+    if (!ref) throw new Error(`Sample ${rec.s} has no ${$('ref').value} value.`);
+    const rCt = mean(ref.cts);
+    if (sd(ref.cts) > 0.5) warn.push(`${rec.s} / ${ref.ge}: replicates spread more than 0.5 cycles.`);
+    for (const [k,t] of rec.genes){
+      if (k === refK) continue;
+      if (sd(t.cts) > 0.5) warn.push(`${rec.s} / ${t.ge}: replicates spread more than 0.5 cycles.`);
+      const tCt = mean(t.cts);
+      samples.push({s:rec.s, g:rec.g, ge:t.ge, k, tCt, rCt, d: tCt*lT - rCt*lR});
+    }
+  }
+  if (!samples.length) throw new Error('Add a target gene besides the reference.');
+  const G = new Map();
+  for (const x of samples){ const key = x.k+'|'+norm(x.g); if(!G.has(key)) G.set(key,{ge:x.ge,g:x.g,k:x.k,v:[]}); G.get(key).v.push(x.d); }
+  const summary = [];
+  for (const grp of G.values()){
+    const base = G.get(grp.k+'|'+calK);
+    if (!base) throw new Error(`${grp.ge} has no values in ${$('cal').value}.`);
+    const dd = mean(grp.v) - mean(base.v);
+    summary.push({ge:grp.ge, g:grp.g, n:grp.v.length, d:mean(grp.v), dd, fc:2**-dd, sd:sd(grp.v), isCal: norm(grp.g)===calK});
+    if (grp.v.length < 2) warn.push(`${grp.ge} / ${grp.g}: one biological sample, so no SD.`);
+  }
+  for (const x of samples) x.fc = 2 ** -(x.d - mean(G.get(x.k+'|'+calK).v));
+  summary.sort((a,b)=>a.ge.localeCompare(b.ge) || (b.isCal-a.isCal) || a.g.localeCompare(b.g));
+  samples.sort((a,b)=>a.ge.localeCompare(b.ge) || a.g.localeCompare(b.g) || a.s.localeCompare(b.s, undefined, {numeric:true}));
+  if (skipped) warn.unshift(`${skipped} undetermined or blank Ct ${skipped===1?'row':'rows'} skipped.`);
+  return {summary, samples, input, warn:[...new Set(warn)], ref:$('ref').value, cal:$('cal').value, eT, eR, n:S.size};
+}
+function chart(r){
+  const cw = $('chart').clientWidth || $('qTable').clientWidth || 640, W = Math.max(320, Math.min(640, cw)), pad = W < 480 ? 104 : 150;
+  const rows = r.summary, rowH = 34, H = rows.length*rowH + 34;
+  const maxAbs = Math.max(1, ...rows.map(x=>Math.abs(Math.log2(x.fc))));
+  const mid = pad + (W-pad-70)/2, sc = (W-pad-70)/2/maxAbs;
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Log2 fold change by gene and group">`;
+  svg += `<path d="M${mid} 0 L${mid+1} ${H-26}" stroke="var(--faint)" stroke-width="1.5" stroke-dasharray="3 5"/>`;
+  rows.forEach((x,i)=>{
+    const y = i*rowH + 8, v = Math.log2(x.fc), w = Math.max(Math.abs(v)*sc, 2), x0 = v<0 ? mid-w : mid;
+    svg += `<text x="${pad-12}" y="${y+15}" text-anchor="end" font-family="Inter,sans-serif" font-size="12" fill="var(--muted)">${esc(x.ge)} · ${esc(x.g)}</text>`;
+    svg += `<path d="M${x0} ${y+1} L${x0+w} ${y+2} L${x0+w-1} ${y+19} L${x0+1} ${y+20} Z" fill="${x.isCal?'none':'var(--marker)'}" fill-opacity=".25" stroke="${x.isCal?'var(--faint)':'var(--marker)'}" stroke-width="2" stroke-linejoin="round"/>`;
+    svg += `<text x="${v<0?x0-8:x0+w+8}" y="${y+16}" text-anchor="${v<0?'end':'start'}" font-family="Gochi Hand,cursive" font-size="17" fill="var(--marker)">${fmt(x.fc,3)}×</text>`;
+  });
+  svg += `<text x="${mid}" y="${H-6}" text-anchor="middle" font-family="Gochi Hand,cursive" font-size="15" fill="var(--faint)">log₂ fold change vs ${esc(r.cal)}</text></svg>`;
+  $('chart').innerHTML = svg;
+}
+let last = null;
+function run(){
+  if (qMode !== 'table') return;
+  try{
+    last = analyze(gridRows()); const r = last;
+    $('sumBody').innerHTML = r.summary.map(x=>`<tr><td>${esc(x.ge)}</td><td>${esc(x.g)}</td><td class="num">${x.n}</td><td class="num">${fmt(x.d,4)}</td><td class="num">${fmt(x.dd,4)}</td><td class="num ${x.fc>1&&!x.isCal?'up':''}">${fmt(x.fc,4)}×</td><td class="num">${fmt(x.sd,3)}</td></tr>`).join('');
+    $('sampBody').innerHTML = r.samples.map(x=>`<tr><td>${esc(x.s)}</td><td>${esc(x.g)}</td><td>${esc(x.ge)}</td><td class="num">${fmt(x.tCt,4)}</td><td class="num">${fmt(x.rCt,4)}</td><td class="num">${fmt(x.d,4)}</td><td class="num">${fmt(x.fc,4)}×</td></tr>`).join('');
+    $('results').hidden = false;
+    chart(r);
+    $('qc').textContent = r.warn.length ? r.warn.slice(0,4).join(' ') + (r.warn.length>4 ? ` Plus ${r.warn.length-4} more in the Excel file.` : '') : 'No replicate or high-Ct flags. Still check melt curves and that your reference gene is stable.';
+    $('results').hidden = false;
+    setMsg(`${r.n} biological samples, reference ${r.ref}, calibrator ${r.cal}.`);
+  }catch(e){ last = null; $('results').hidden = true; setMsg(e.message, true); }
+}
+
+function sheets(r){ return [
+  {name:'Summary', rows:[['Gene','Group','n','Mean dCt','ddCt','Fold change','SD dCt'], ...r.summary.map(x=>[x.ge,x.g,x.n,x.d,x.dd,x.fc,x.sd])]},
+  {name:'Samples', rows:[['Sample','Group','Gene','Target Ct','Reference Ct','dCt','Fold'], ...r.samples.map(x=>[x.s,x.g,x.ge,x.tCt,x.rCt,x.d,x.fc])]},
+  {name:'Input', rows:[['Sample','Group','Gene','Ct'], ...r.input]},
+  {name:'QC', rows:[['Item','Value'],['Reference gene',r.ref],['Calibrator',r.cal],['Target efficiency',r.eT],['Reference efficiency',r.eR],['Method','dCt = Ct_target*log2(E_target) - Ct_ref*log2(E_ref); fold = 2^-(dCt - mean calibrator dCt)'], ...r.warn.map((w,i)=>['Flag '+(i+1),w])]}
+];}
+const xml = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
+function save(blob, name){ const u = URL.createObjectURL(blob), a = document.createElement('a'); a.href=u; a.download=name; document.body.append(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(u),2000); }
+const colName = i => { let s=''; for(let n=i+1;n>0;n=Math.floor((n-1)/26)) s=String.fromCharCode(65+(n-1)%26)+s; return s; };
+async function xlsx(sh){
+  if (typeof JSZip === 'undefined') throw new Error('the Excel writer did not load');
+  const z = new JSZip();
+  z.file('[Content_Types].xml','<?xml version="1.0" encoding="UTF-8"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>'+sh.map((_,i)=>`<Override PartName="/xl/worksheets/sheet${i+1}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>`).join('')+'</Types>');
+  z.file('_rels/.rels','<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>');
+  z.file('xl/workbook.xml','<?xml version="1.0" encoding="UTF-8"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets>'+sh.map((s,i)=>`<sheet name="${xml(s.name)}" sheetId="${i+1}" r:id="rId${i+1}"/>`).join('')+'</sheets></workbook>');
+  z.file('xl/_rels/workbook.xml.rels','<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'+sh.map((_,i)=>`<Relationship Id="rId${i+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet${i+1}.xml"/>`).join('')+`<Relationship Id="rId${sh.length+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`);
+  z.file('xl/styles.xml','<?xml version="1.0" encoding="UTF-8"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><fonts count="2"><font><sz val="11"/><name val="Aptos"/></font><font><b/><sz val="11"/><name val="Aptos"/></font></fonts><fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills><borders count="1"><border/></borders><cellStyleXfs count="1"><xf/></cellStyleXfs><cellXfs count="2"><xf/><xf fontId="1" applyFont="1"/></cellXfs></styleSheet>');
+  sh.forEach((s,i)=>{
+    const body = s.rows.map((row,ri)=>`<row r="${ri+1}">${row.map((v,ci)=>{
+      if (v==null || v==='') return '';
+      const a = `r="${colName(ci)}${ri+1}"${ri===0?' s="1"':''}`;
+      return typeof v==='number' && Number.isFinite(v) ? `<c ${a}><v>${v}</v></c>` : `<c ${a} t="inlineStr"><is><t xml:space="preserve">${xml(v)}</t></is></c>`;
+    }).join('')}</row>`).join('');
+    z.file(`xl/worksheets/sheet${i+1}.xml`,`<?xml version="1.0" encoding="UTF-8"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetData>${body}</sheetData></worksheet>`);
+  });
+  return z.generateAsync({type:'blob'});
+}
+const csvCell = v => { const s=String(v??''); return /[",\n]/.test(s)?`"${s.replace(/"/g,'""')}"`:s; };
+$('xlsx').addEventListener('click', async()=>{ if(!last) return; try{ save(await xlsx(sheets(last)),'qpcr_results.xlsx'); }catch(e){ setMsg('Could not build the Excel file: '+e.message, true); } });
+$('csv').addEventListener('click', ()=>{ if(!last) return; save(new Blob([sheets(last)[0].rows.map(r=>r.map(csvCell).join(',')).join('\r\n')],{type:'text/csv'}),'qpcr_summary.csv'); });
+$('copy').addEventListener('click', async()=>{ if(!last) return; try{ await navigator.clipboard.writeText(sheets(last)[0].rows.map(r=>r.map(v=>v??'').join('\t')).join('\n')); setMsg('Summary copied. Paste into Excel or Prism.'); }catch{ setMsg('Your browser blocked the clipboard.', true); } });
+
+/* ====== Shared result renderer ====== */
+function show(p, big, unit, say, work, ok=true){
+  $(p+'Big').innerHTML = ok ? `${big}${unit?`<small>${unit}</small>`:''}` : '–';
+  $(p+'Say').textContent = say;
+  $(p+'Work').innerHTML = ok && work.length ? '<div class="ttl">show your work</div>' + work.map(w => typeof w === 'string' ? `<div>${w}</div>` : w.note ? `<div class="note2">${w.note}</div>` : `<div class="ans">${w.a}</div>`).join('') : '';
+  $(p+'Res').style.opacity = ok ? 1 : .45;
+}
+const f = (v,d=4) => fmt(v,d);
+
+/* ====== Molarity ====== */
+let molMode = 'mass';
+seg('molMode', m => { molMode = m; $('fConc').hidden = m !== 'mass'; $('fMass').hidden = m === 'mass'; mol(); });
+function mol(){
+  const mw = num('mw'), v = num('vol'), x = num(molMode === 'mass' ? 'mm' : 'mg');
+  if (![mw,v,x].every(pos)) return show('mol','','','fill in the boxes',[],false);
+  if (molMode === 'mass'){
+    const mg = x*v*mw/1000;
+    const [b,u] = mg >= 1000 ? [f(mg/1000),'g'] : mg < 1 ? [f(mg*1000),'µg'] : [f(mg),'mg'];
+    show('mol', b, u, `to weigh, then bring to ${f(v)} mL`, ['mg = mM × mL × MW ÷ 1000', `= ${f(x)} × ${f(v)} × ${f(mw)} ÷ 1000`, {a:`= ${f(mg)} mg`}]);
+  } else {
+    const mM = x*1000/(mw*v);
+    const [b,u] = mM < 1 ? [f(mM*1000),'µM'] : [f(mM),'mM'];
+    show('mol', b, u, `${f(x)} mg in ${f(v)} mL`, ['mM = mg × 1000 ÷ (MW × mL)', `= ${f(x)} × 1000 ÷ (${f(mw)} × ${f(v)})`, {a:`= ${f(mM)} mM`}]);
+  }
+}
+watch(['mw','vol','mm','mg'], mol); mol();
+
+/* ====== Dilution ====== */
+let dilMode = 'one';
+seg('dilMode', m => { dilMode = m; $('dOne').hidden = m !== 'one'; $('dSer').hidden = m !== 'ser'; dil(); });
+function tubes(concs, maxC){
+  const n = concs.length, w = Math.min(64, 600/n), H = 120;
+  let s = `<svg viewBox="0 0 ${n*w+10} ${H+34}" aria-hidden="true">`;
+  concs.forEach((c,i)=>{
+    const x = 8 + i*w, tw = w*0.55, op = Math.max(.06, Math.min(1, c/maxC)) * .85;
+    s += `<path d="M${x} 10 L${x} ${H-22} Q ${x+tw/2} ${H+4} ${x+tw} ${H-22} L${x+tw} 10" fill="var(--marker)" fill-opacity="${op}" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>`;
+    s += `<path d="M${x-3} 10 L${x+tw+3} 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`;
+    s += `<text x="${x+tw/2}" y="${H+22}" text-anchor="middle" font-family="Gochi Hand,cursive" font-size="${n>8?12:15}" fill="var(--marker)">${fmt(c,3)}</text>`;
+  });
+  return s + '</svg>';
+}
+function dil(){
+  $('dilViz').innerHTML = '';
+  if (dilMode === 'one'){
+    const a = num('c1'), b = num('c2'), v = num('v2');
+    if (![a,b,v].every(pos)) return show('dil','','','fill in the boxes',[],false);
+    if (b > a) return show('dil','','','the final is stronger than the stock',[],false);
+    const st = b*v/a;
+    show('dil', f(st), 'µL', `of stock + ${f(v-st)} µL diluent`, ['V₁ = C₂ × V₂ ÷ C₁', `= ${f(b)} × ${f(v)} ÷ ${f(a)}`, {a:`= ${f(st)} µL stock`}, `diluent = ${f(v)} − ${f(st)} = ${f(v-st)} µL`, ...(st < 1 ? [{note:'Under 1 µL is hard to pipette accurately. Make an intermediate dilution first.'}] : [])]);
+    $('dilViz').innerHTML = tubes([a,b], a);
+  } else {
+    const c0 = num('s0'), fa = num('sf'), n = Math.round(num('sN')), V = num('sV');
+    if (![c0,V].every(pos) || !(fa > 1) || !(n >= 2 && n <= 24)) return show('dil','','','factor above 1, 2 to 24 tubes',[],false);
+    const T = V/fa, D = V - T, last = c0/fa**(n-1);
+    show('dil', f(T), 'µL', 'to carry from tube to tube', [`transfer = ${f(V)} ÷ ${f(fa)} = ${f(T)} µL`, `diluent in tubes 2 to ${n} = ${f(V)} − ${f(T)} = ${f(D)} µL`, `tube 1 = ${f(V)} µL of stock`, {a:`tube ${n} = ${f(c0)} ÷ ${f(fa)}^${n-1} = ${f(last)}`}, {note:`After the transfers, every tube but the last holds ${f(D)} µL.`}]);
+    $('dilViz').innerHTML = tubes(Array.from({length:n},(_,i)=>c0/fa**i), c0);
+  }
+}
+watch(['c1','c2','v2','s0','sf','sN','sV'], dil); dil();
+
+/* ====== Seeding ====== */
+const PLATES = {96:[8,12,100],48:[6,8,300],24:[4,6,500],12:[3,4,1000],6:[2,3,2000]};
+$('sp').addEventListener('change', () => { const p = PLATES[$('sp').value]; $('sn').value = +$('sp').value; $('sv').value = p[2]; seed(); });
+function seed(){
+  const P = +$('sp').value, [, cols] = PLATES[P];
+  const nW = Math.max(0, Math.min(P, Math.round(num('sn')) || 0));
+  const plate = $('plate');
+  plate.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+  plate.style.maxWidth = (cols*38) + 'px';
+  if (plate.children.length !== P) plate.innerHTML = '<i></i>'.repeat(P);
+  [...plate.children].forEach((w,i) => w.classList.toggle('on', i < nW));
+  const conc = num('sc'), per = num('sw'), vw = num('sv'), ex = parseFloat($('sx').value) || 0;
+  if (![conc,per,vw].every(pos) || !nW) return show('seed','','','fill in the boxes',[],false);
+  const k = 1 + ex/100, eff = nW*k, cells = per*eff, total = vw*eff, susp = cells/conc*1000;
+  if (susp > total) return show('seed','','',`too dilute: spin down and resuspend in less medium`,[],false);
+  const [b,u] = susp >= 1000 ? [f(susp/1000),'mL'] : [f(susp),'µL'];
+  show('seed', b, u, `of cells + ${vol(total-susp)} medium`, [
+    `wells with extra = ${nW} × ${f(k,3)} = ${f(eff)}`,
+    `cells = ${per.toLocaleString('en-US')} × ${f(eff)} = ${Math.round(cells).toLocaleString('en-US')}`,
+    `suspension = ${Math.round(cells).toLocaleString('en-US')} ÷ ${conc.toLocaleString('en-US')} per mL = ${vol(susp)}`,
+    `total = ${vol(vw)} × ${f(eff)} = ${vol(total)}`,
+    {a:`medium = ${vol(total)} − ${vol(susp)} = ${vol(total-susp)}`}]);
+}
+watch(['sn','sv','sc','sw','sx'], seed); seed();
+
+/* ====== Spin ====== */
+let spinMode = 'g';
+seg('spinMode', m => { spinMode = m; $('fSpin').firstChild.textContent = m === 'g' ? 'Force (× g)' : 'Speed (rpm)'; $('spinIn').value = m === 'g' ? 300 : 1500; spin(); });
+function spin(){
+  const x = num('spinIn'), r = num('rad');
+  if (![x,r].every(pos)) return show('spin','','','fill in the boxes',[],false);
+  if (spinMode === 'g'){ const rpm = Math.sqrt(x/(1.118e-5*r));
+    show('spin', Math.round(rpm).toLocaleString('en-US'), 'rpm', `for ${f(x)} × g, ${f(r)} cm rotor radius`, ['rpm = √( g ÷ (1.118×10⁻⁵ × r) )', `= √( ${f(x)} ÷ (1.118×10⁻⁵ × ${f(r)}) )`, {a:`= ${Math.round(rpm).toLocaleString('en-US')} rpm`}]); }
+  else { const g = 1.118e-5*r*x*x;
+    show('spin', Math.round(g).toLocaleString('en-US'), '× g', `at ${f(x)} rpm, ${f(r)} cm rotor radius`, ['g = 1.118×10⁻⁵ × r × rpm²', `= 1.118×10⁻⁵ × ${f(r)} × ${f(x)}²`, {a:`= ${Math.round(g).toLocaleString('en-US')} × g`}]); }
+}
+watch(['spinIn','rad'], spin); spin();
+
+/* ====== Doubling ====== */
+function dbl(){
+  const a = num('n0'), b = num('n1'), h = num('dh');
+  if (![a,b,h].every(pos)) return show('dbl','','','fill in the boxes',[],false);
+  if (b <= a) return show('dbl','','','the second count has to be higher',[],false);
+  const d = Math.log2(b/a), td = h/d;
+  show('dbl', f(td,3), 'h', `per doubling`, [`fold growth = ${f(b)} ÷ ${f(a)} = ${f(b/a)}`, `doublings = log₂(${f(b/a)}) = ${f(d,3)}`, {a:`Td = ${f(h)} h ÷ ${f(d,3)} = ${f(td,3)} h`}]);
+}
+watch(['n0','n1','dh'], dbl); dbl();
+
+/* ====== Ligation ====== */
+function lig(){
+  const v = num('lv'), vb = num('lvb'), ib = num('lib'), r = num('lr');
+  if (![v,vb,ib,r].every(pos)) return show('lig','','','fill in the boxes',[],false);
+  const ng = v*(ib/vb)*r, vp = v*1000/(vb*660), ip = ng*1000/(ib*660);
+  show('lig', f(ng,3), 'ng', `of insert with ${f(v)} ng vector`, ['insert = vector × (insert bp ÷ vector bp) × ratio', `= ${f(v)} × (${f(ib)} ÷ ${f(vb)}) × ${f(r)}`, {a:`= ${f(ng,3)} ng`}, `vector = ${f(v)} × 1000 ÷ (${f(vb)} × 660) = ${f(vp,3)} pmol`, `insert = ${f(ip,3)} pmol, a ${f(r)}:1 ratio`]);
+}
+watch(['lv','lvb','lib','lr'], lig); lig();
+
+/* ====== Small editable grids ====== */
+function miniRow(tbody, vals, n, extra=''){
+  const tr = document.createElement('tr');
+  tr.innerHTML = vals.slice(0,n).map((v,i)=>`<td${i?' class="num"':''}><input ${i?'inputmode="decimal"':''} value="${esc(v)}"></td>`).join('') + extra + '<td class="x"><button aria-label="Delete row">×</button></td>';
+  tbody.append(tr); return tr;
+}
+function miniGrid(id, cols, extra, onChange){
+  const g = $(id);
+  g.addEventListener('input', onChange);
+  g.addEventListener('click', e => { if (e.target.closest('.x button')){ e.target.closest('tr').remove(); onChange(); } });
+  g.addEventListener('paste', e => {
+    const input = e.target.closest('input'); if (!input) return;
+    const text = (e.clipboardData || window.clipboardData).getData('text');
+    if (!/[\t\n]/.test(text.trim())) return;
+    e.preventDefault();
+    let tr = input.closest('tr'); const c0 = input.closest('td').cellIndex;
+    for (const r of parseText(text)){
+      if (r.every(v => isNaN(parseFloat(v))) && r.length > 1 && tr === input.closest('tr')) continue;
+      if (!tr) tr = miniRow(g, Array(cols).fill(''), cols, extra);
+      const ins = tr.querySelectorAll('input');
+      r.forEach((v,j) => { if (ins[c0+j]) ins[c0+j].value = String(v ?? '').trim(); });
+      tr = tr.nextElementSibling;
+    }
+    onChange();
+  });
+  return g;
+}
+const rowsOf = g => [...g.rows].map(tr => [...tr.querySelectorAll('input')].map(i=>i.value.trim())).filter(r=>r.some(Boolean));
+
+/* ====== Western loading ====== */
+const wbGrid = miniGrid('wbGrid', 2, '', wb);
+[['Ctrl','2.10'],['siRNA 1','1.84'],['siRNA 2','2.35'],['Drug','1.62'],['Combo','1.47']].forEach(r=>miniRow(wbGrid, r, 2));
+$('wbAdd').addEventListener('click', () => { miniRow(wbGrid, ['',''], 2).querySelector('input').focus(); });
+['wbUg','wbV','wbX'].forEach(i => $(i).addEventListener('input', wb));
+function wb(){
+  const ug = num('wbUg'), V = num('wbV'), X = +$('wbX').value;
+  const rows = rowsOf(wbGrid).map(([n,c]) => ({n: n || 'sample', c: parseFloat(String(c).replace(',','.'))})).filter(r => pos(r.c));
+  if (![ug,V].every(pos) || !rows.length){ $('wbBody').innerHTML=''; $('wbViz').innerHTML=''; return show('wb','','','add samples and concentrations',[],false); }
+  const buf = V/X, room = V - buf;
+  let bad = 0;
+  const out = rows.map(r => { const ly = ug/r.c, w = room - ly; if (w < 0) bad++; return {...r, ly, w}; });
+  const maxUg = Math.min(...rows.map(r => r.c*room));
+  $('wbBody').innerHTML = out.map(r => `<tr><td>${esc(r.n)}</td><td class="num${r.w<0?' bad':''}">${f(r.ly,3)} µL</td><td class="num">${f(buf,3)} µL</td><td class="num${r.w<0?' bad':''}">${r.w<0?'too dilute':f(r.w,3)+' µL'}</td><td class="num">${f(V)} µL</td></tr>`).join('');
+  const n = Math.min(out.length, 10), lw = 180/(n+1);
+  let g = `<rect x="6" y="4" width="208" height="80" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>`;
+  for (let i=0;i<=n;i++){ const x = 14 + i*lw; g += `<path d="M${x} 10 h${lw*0.7}" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".5"/>`;
+    if (i===0){ [26,38,52,66].forEach(y => g += `<path d="M${x+2} ${y} h${lw*0.6}" stroke="currentColor" stroke-width="1.5" opacity=".45"/>`); }
+    else { const ok = out[i-1].w >= 0; g += `<path d="M${x+1} 46 q ${lw*0.35} 2 ${lw*0.68} 0" stroke="var(--marker)" stroke-width="${ok?5:2}" stroke-linecap="round" opacity="${ok?.85:.35}"/>`; } }
+  $('wbViz').innerHTML = g;
+  const s0 = out[0];
+  const work = [`buffer = ${f(V)} µL ÷ ${X} = ${f(buf,3)} µL`, `${esc(s0.n)}: lysate = ${f(ug)} µg ÷ ${f(s0.c)} µg/µL = ${f(s0.ly,3)} µL`, s0.w >= 0 ? `${esc(s0.n)}: water = ${f(V)} − ${f(buf,3)} − ${f(s0.ly,3)} = ${f(s0.w,3)} µL` : `${esc(s0.n)}: needs ${f(s0.ly,3)} µL but only ${f(room,3)} µL fits`];
+  if (bad) show('wb', f(Math.floor(maxUg*10)/10,3), 'µg max', `${bad} sample${bad>1?'s are':' is'} too dilute for ${f(ug)} µg`, [...work, {a:`most you can load equally = ${f(Math.min(...rows.map(r=>r.c)))} µg/µL × ${f(room,3)} µL = ${f(maxUg,3)} µg`}, {note:'Lower the protein per lane, raise the lane volume, or concentrate the weakest lysate.'}]);
+  else show('wb', f(ug), 'µg', `in every lane, ${out.length} samples`, [...work, {a:`every lane: ${f(ug)} µg in ${f(V)} µL`}, {note:`Max you could load equally at this volume: ${f(maxUg,3)} µg.`}]);
+}
+wb();
+
+/* ====== Tumor volume ====== */
+const tvGrid = miniGrid('tvGrid', 3, '<td class="num tvv" style="padding:0 8px;color:var(--muted)"></td>', tv);
+[['7','5.2','4.1'],['10','6.8','5.0'],['14','8.3','6.4'],['17','9.9','7.5'],['21','11.6','8.8']].forEach(r=>miniRow(tvGrid, r, 3, '<td class="num tvv" style="padding:0 8px;color:var(--muted)"></td>'));
+$('tvAdd').addEventListener('click', () => { miniRow(tvGrid, ['','',''], 3, '<td class="num tvv" style="padding:0 8px;color:var(--muted)"></td>').querySelector('input').focus(); });
+function tv(){
+  const pts = [];
+  [...tvGrid.rows].forEach(tr => {
+    const [d,l,w] = [...tr.querySelectorAll('input')].map(i => parseFloat(i.value.replace(',','.')));
+    const cell = tr.querySelector('.tvv');
+    if ([l,w].every(pos) && Number.isFinite(d)){ const L = Math.max(l,w), W = Math.min(l,w), v = L*W*W/2; cell.textContent = f(v,3); pts.push({d,L,W,v}); }
+    else cell.textContent = '';
+  });
+  pts.sort((a,b)=>a.d-b.d);
+  if (!pts.length){ $('tvViz').innerHTML=''; return show('tv','','','add a day with length and width',[],false); }
+  const a = pts[0], z = pts[pts.length-1];
+  const xs = d => 16 + (pts.length>1 ? (d-a.d)/(z.d-a.d||1) : .5)*190, maxV = Math.max(...pts.map(p=>p.v)), ys = v => 96 - v/maxV*80;
+  let g = `<path d="M12 98 L212 99 M12 98 L13 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5" fill="none"/>`;
+  g += `<path d="${pts.map((p,i)=>`${i?'L':'M'}${xs(p.d).toFixed(1)} ${ys(p.v).toFixed(1)}`).join(' ')}" fill="none" stroke="var(--marker)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>`;
+  g += pts.map(p=>`<circle cx="${xs(p.d).toFixed(1)}" cy="${ys(p.v).toFixed(1)}" r="3.2" fill="var(--marker)"/>`).join('');
+  g += `<text x="16" y="110" font-family="Gochi Hand,cursive" font-size="12" fill="currentColor">day ${f(a.d)}</text><text x="206" y="110" text-anchor="end" font-family="Gochi Hand,cursive" font-size="12" fill="currentColor">day ${f(z.d)}</text>`;
+  $('tvViz').innerHTML = g;
+  const work = ['V = L × W² ÷ 2', `day ${f(z.d)}: ${f(z.L)} × ${f(z.W)}² ÷ 2`, {a:`= ${f(z.v,3)} mm³`}];
+  let say = `on day ${f(z.d)}`;
+  if (pts.length > 1 && z.v > a.v && z.d > a.d){
+    const td = (z.d-a.d)*Math.LN2/Math.log(z.v/a.v);
+    say += `, ${f(z.v/a.v,3)}× since day ${f(a.d)}`;
+    work.push(`growth = ${f(z.v,3)} ÷ ${f(a.v,3)} = ${f(z.v/a.v,3)}×`, `doubling = (${f(z.d)} − ${f(a.d)}) × ln2 ÷ ln(${f(z.v/a.v,3)}) = ${f(td,3)} days`);
+  }
+  show('tv', f(z.v,3), 'mm³', say, work);
+}
+tv();
+
+/* ====== Bradford ====== */
+const brStd = miniGrid('brStd', 2, '', br);
+const brGrid = miniGrid('brGrid', 3, '', br);
+[[0.5,0.0886],[1,0.1266],[1.5,0.2135],[2,0.2797],[2.5,0.336],[3,0.3993],[3.5,0.5178]].forEach(r=>miniRow(brStd, r.map(String), 2));
+[['Ctrl','0.286','0.279'],['siRNA 1','0.251','0.262'],['siRNA 2','0.318','0.305'],['Drug','0.232','0.241']].forEach(r=>miniRow(brGrid, r, 3));
+$('brAddStd').addEventListener('click', () => { miniRow(brStd, ['',''], 2).querySelector('input').focus(); });
+$('brAdd').addEventListener('click', () => { miniRow(brGrid, ['','',''], 3).querySelector('input').focus(); });
+['brU','brBlank','brDil','brUg','brV'].forEach(i => $(i).addEventListener('input', br));
+function linReg(xs, ys){
+  const n = xs.length, mx = mean(xs), my = mean(ys);
+  const sxy = xs.reduce((a,x,i)=>a+(x-mx)*(ys[i]-my),0), sxx = xs.reduce((a,x)=>a+(x-mx)**2,0);
+  const m = sxy/sxx, b = my - m*mx;
+  const ssr = ys.reduce((a,y,i)=>a+(y-(m*xs[i]+b))**2,0), sst = ys.reduce((a,y)=>a+(y-my)**2,0);
+  return {m, b, r2: 1 - ssr/sst};
+}
+let brLast = [];
+function br(){
+  const blank = parseFloat($('brBlank').value) || 0, dil = num('brDil') || 1, ug = num('brUg'), V = num('brV'), unit = +$('brU').value;
+  const std = rowsOf(brStd).map(([c,o]) => [parseFloat(c), parseFloat(o) - blank]).filter(([c,o]) => Number.isFinite(c) && Number.isFinite(o));
+  $('brViz').innerHTML = ''; $('brBody').innerHTML = ''; brLast = [];
+  if (std.length < 3) return show('br','','','add at least 3 standards',[],false);
+  const xs = std.map(p=>p[0]*unit), ys = std.map(p=>p[1]);
+  if (Math.max(...xs) === Math.min(...xs)) return show('br','','','standards need different amounts',[],false);
+  const reg = linReg(xs, ys);
+  if (!(reg.m > 0)) return show('br','','','the curve should go up with protein',[],false);
+  const lo = Math.min(...ys), hi = Math.max(...ys);
+  const samples = rowsOf(brGrid).map(([n,a,b]) => {
+    const ods = [a,b].map(v=>parseFloat(String(v).replace(',','.'))).filter(Number.isFinite);
+    if (!ods.length) return null;
+    const od = mean(ods) - blank, c = (od - reg.b)/reg.m*dil;
+    return {n: n || 'sample', od, c, out: od < lo || od > hi, ly: c > 0 ? ug/c : NaN};
+  }).filter(Boolean);
+  brLast = samples;
+  // curve drawing
+  const allX = [...xs, ...samples.map(s=>s.c/dil)].filter(Number.isFinite), maxX = Math.max(...allX, 0)*1.08 || 1;
+  const allY = [...ys, ...samples.map(s=>s.od)], maxY = Math.max(...allY, 0)*1.1 || 1;
+  const X = x => 18 + x/maxX*192, Y = y => 104 - y/maxY*92;
+  let g = `<path d="M14 104 L212 105 M14 104 L15 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5" fill="none"/>`;
+  g += `<path d="M${X(0)} ${Y(reg.b)} L${X(maxX)} ${Y(reg.m*maxX+reg.b)}" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 4" opacity=".6"/>`;
+  g += xs.map((x,i)=>`<circle cx="${X(x).toFixed(1)}" cy="${Y(ys[i]).toFixed(1)}" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/>`).join('');
+  g += samples.filter(s=>Number.isFinite(s.c)).map(s=>`<circle cx="${X(s.c/dil).toFixed(1)}" cy="${Y(s.od).toFixed(1)}" r="3.6" fill="var(--marker)"/>`).join('');
+  g += `<text x="212" y="117" text-anchor="end" font-family="Gochi Hand,cursive" font-size="12" fill="currentColor">protein</text><text x="20" y="14" font-family="Gochi Hand,cursive" font-size="12" fill="currentColor">OD</text>`;
+  $('brViz').innerHTML = g;
+  $('brBody').innerHTML = samples.map(s => {
+    const ok = Number.isFinite(s.ly) && s.ly <= V;
+    return `<tr><td>${esc(s.n)}${s.out?' <span class="up">out of range</span>':''}</td><td class="num">${f(s.od,3)}</td><td class="num">${Number.isFinite(s.c)&&s.c>0?f(s.c,3):'–'}</td><td class="num${ok?'':' bad'}">${ok?f(s.ly,3)+' µL':'too dilute'}</td><td class="num">${ok?f(V-s.ly,3)+' µL':'–'}</td></tr>`;
+  }).join('');
+  const r2say = reg.r2 >= 0.98 ? 'the curve looks good' : reg.r2 >= 0.95 ? 'usable, but check your standards' : 'redo the standards';
+  const work = [`OD = ${f(reg.m,4)} × protein ${reg.b<0?'−':'+'} ${f(Math.abs(reg.b),3)}`, `R² = ${f(reg.r2,4)}`];
+  const s0 = samples.find(s=>Number.isFinite(s.c) && s.c > 0);
+  if (s0){
+    work.push(`${esc(s0.n)}: protein = (${f(s0.od,3)} ${reg.b<0?'+':'−'} ${f(Math.abs(reg.b),3)}) ÷ ${f(reg.m,4)}${dil!==1?` × ${f(dil)}`:''} = ${f(s0.c,3)} µg/µL`);
+    if (Number.isFinite(s0.ly)) work.push({a:`${esc(s0.n)}: ${f(ug)} µg ÷ ${f(s0.c,3)} = ${f(s0.ly,3)} µL lysate, + ${f(V-s0.ly,3)} µL buffer`});
+  }
+  const nOut = samples.filter(s=>s.out).length;
+  if (nOut) work.push({note:`${nOut} sample${nOut>1?'s fall':' falls'} outside the standards. Dilute and re-read, or add a higher standard.`});
+  show('br', f(reg.r2,4), 'R²', r2say, work);
+}
+br();
+$('brToWb').addEventListener('click', () => {
+  const ok = brLast.filter(s => Number.isFinite(s.c) && s.c > 0);
+  if (!ok.length) return ioMsg('br','No sample concentrations to send yet.',true);
+  wbGrid.innerHTML = ''; ok.forEach(s => miniRow(wbGrid, [s.n, (Math.round(s.c*1000)/1000).toString()], 2)); wb();
+  document.querySelector('#bench .chip[data-tool="wb"]').click();
+  ioMsg('wb', `${ok.length} samples came over from Bradford.`);
+});
+
+/* ====== Open and save for every tool ====== */
+function ioMsg(p, t, err){ const el = $(p+'Io'); if (!el) return; el.textContent = t; el.className = 'msg' + (err ? ' err' : ''); }
+const labelOf = id => { const l = $(id).closest('label'); return l ? l.childNodes[0].textContent.trim() : id; };
+const TOOLS = {
+  qq:  {name:'qPCR quick', seg:null, inputs:[['qT','Target gene'],['qR','Reference gene'],['qC','Control group'],['qX','Treated group'],['qCT','Control target Ct'],['qCR','Control reference Ct'],['qXT','Treated target Ct'],['qXR','Treated reference Ct'],['qET','Target efficiency (%)'],['qER','Reference efficiency (%)']], out:['qFold','qSay','qWork'], run: quick},
+  mol: {name:'Molarity', seg:['molMode', () => molMode], inputs:['mw','vol','mm','mg'], run: mol},
+  dil: {name:'Dilution', seg:['dilMode', () => dilMode], inputs:['c1','c2','v2','s0','sf','sN','sV'], run: dil},
+  seed:{name:'Cell seeding', inputs:['sp','sn','sv','sc','sw','sx'], run: seed},
+  spin:{name:'Spin speed', seg:['spinMode', () => spinMode], inputs:['spinIn','rad'], run: spin},
+  dbl: {name:'Doubling time', inputs:['n0','n1','dh'], run: dbl},
+  lig: {name:'Ligation', inputs:['lv','lvb','lib','lr'], run: lig},
+  wb:  {name:'Western loading', inputs:['wbUg','wbV','wbX'], grids:[{g:()=>wbGrid, name:'Samples', head:['Sample','Protein (µg/µL)'], keys:[['sample','name','lane','id'],['protein','conc','ug','µg','bca','bradford']]}], run: wb},
+  tv:  {name:'Tumor volume', inputs:[], grids:[{g:()=>tvGrid, name:'Measurements', head:['Day','Length (mm)','Width (mm)','Volume (mm³)'], keys:[['day','time','d'],['length','long','l'],['width','short','w']], extra:true}], run: tv},
+  br:  {name:'Bradford', inputs:['brU','brBlank','brDil','brUg','brV'], grids:[
+          {g:()=>brStd, name:'Standards', head:['BSA standard','OD 595'], keys:[['bsa','standard','std','conc','amount'],['od','abs','595','absorbance']], must:0},
+          {g:()=>brGrid, name:'Samples', head:['Sample','OD rep 1','OD rep 2'], keys:[['sample','name','id'],['od1','rep1','od','abs','595','absorbance','read1'],['od2','rep2','read2']]}], run: br}
+};
+const hNorm = v => String(v ?? '').toLowerCase().replace(/[^a-z0-9µ]+/g,'');
+function matchCols(header, keys){
+  const h = header.map(hNorm), used = new Set();
+  return keys.map(alts => { const i = h.findIndex((c,k) => !used.has(k) && c && alts.some(a => c === a || c.startsWith(a))); if (i >= 0) used.add(i); return i; });
+}
+function gridToRows(g, withExtra){ return [...g.rows].map(tr => { const v = [...tr.querySelectorAll('input')].map(i=>i.value.trim()); if (withExtra) v.push(...[...tr.querySelectorAll('td:not(.x)')].filter(td=>!td.querySelector('input')).map(td=>td.textContent.trim())); return v; }).filter(r=>r.some(Boolean)); }
+function numOrText(v){ const n = Number(v); return v !== '' && Number.isFinite(n) ? n : v; }
+function exportTool(p){
+  const T = TOOLS[p], ids = T.inputs.map(x => Array.isArray(x) ? x : [x, labelOf(x)]);
+  const settings = [['Field','Value','Key'], ...(T.seg ? [['Mode', T.seg[1](), 'mode']] : []), ...ids.map(([id,l]) => [l, numOrText($(id).value), id])];
+  const sheets = [];
+  (T.grids || []).forEach(G => sheets.push({name: G.name, rows: [G.head, ...gridToRows(G.g(), G.extra).map(r=>r.map(numOrText))]}));
+  sheets.push({name:'Settings', rows: settings});
+  const [bI,sI,wI] = T.out || [p+'Big', p+'Say', p+'Work'];
+  const res = [['Answer', [...$(bI).childNodes].map(n=>n.textContent.trim()).join(' ').trim()], ['', $(sI).textContent.trim()], [''], ['Worked steps']];
+  [...$(wI).children].forEach(d => { if (!d.classList.contains('ttl')) res.push([d.textContent.trim()]); });
+  document.querySelectorAll(`#t-${p==='qq'?'qpcr':p} .tbl table`).forEach(t => { res.push(['']); [...t.rows].forEach(r => res.push([...r.cells].map(c=>numOrText(c.textContent.replace(/ µL$/,'').trim())))); });
+  sheets.push({name:'Results', rows: res});
+  return xlsx(sheets).then(b => save(b, T.name.toLowerCase().replace(/[^a-z0-9]+/g,'_') + '.xlsx'));
+}
+function applySettings(T, rows){
+  let n = 0;
+  const hdr = rows[0].map(hNorm), kc = hdr.indexOf('key'), vc = hdr.indexOf('value'), fc = hdr.indexOf('field');
+  const ids = T.inputs.map(x => Array.isArray(x) ? x : [x, labelOf(x)]);
+  const modeRow = rows.find(r => hNorm(r[kc]) === 'mode' || hNorm(r[fc]) === 'mode');
+  if (T.seg && modeRow){ const b = document.querySelector(`#${T.seg[0]} button[data-m="${String(modeRow[vc]).trim()}"]`); if (b) b.click(); }
+  for (const r of rows.slice(1)){
+    const hit = ids.find(([id,l]) => (kc>=0 && String(r[kc]).trim() === id) || (fc>=0 && hNorm(r[fc]) === hNorm(l)));
+    if (hit && vc >= 0 && String(r[vc]).trim() !== ''){ $(hit[0]).value = String(r[vc]).trim(); n++; }
+  }
+  return n;
+}
+function applyGrid(G, rows){
+  for (let h = 0; h < Math.min(rows.length, 20); h++){
+    const cols = matchCols(rows[h], G.keys);
+    const need = G.keys.length >= 3 && !G.extra ? [0,1] : G.keys.map((_,i)=>i);
+    if (need.every(i => cols[i] >= 0)){
+      const data = rows.slice(h+1).map(r => cols.map(c => c >= 0 ? String(r[c] ?? '').trim() : '')).filter(r => r.some(Boolean));
+      if (!data.length) return 0;
+      const g = G.g(); g.innerHTML = '';
+      data.forEach(r => miniRow(g, r, G.keys.length, G.extra ? '<td class="num tvv" style="padding:0 8px;color:var(--muted)"></td>' : ''));
+      return data.length;
+    }
+  }
+  return 0;
+}
+async function importTool(p, file){
+  const T = TOOLS[p];
+  try{
+    if (!file) return;
+    if (file.size > 10*1024*1024) throw new Error('That file is over 10 MB.');
+    const n = file.name.toLowerCase();
+    const sheets = n.endsWith('.xlsx') ? await parseXlsxAll(await file.arrayBuffer()) : /\.(csv|tsv|txt)$/.test(n) ? [{name:'Sheet', rows: parseText(await file.text())}] : (()=>{throw new Error('Use .xlsx, .csv, or .tsv.')})();
+    let settings = 0, rows = 0; const usedGrid = new Set();
+    for (const sh of sheets){
+      if (!sh.rows.length) continue;
+      const hdr = sh.rows[0].map(hNorm);
+      if (hdr.includes('value') && (hdr.includes('key') || hdr.includes('field'))){ settings += applySettings(T, sh.rows); continue; }
+      for (const [gi, G] of (T.grids || []).entries()){
+        if (usedGrid.has(gi)) continue;
+        const k = applyGrid(G, sh.rows);
+        if (k){ rows += k; usedGrid.add(gi); break; }
+      }
+    }
+    if (!settings && !rows) throw new Error(T.grids ? `Couldn't find matching columns (${T.grids.map(G=>G.head.slice(0,G.keys.length).join(', ')).join(' / ')}).` : 'Open a file saved from this tool, with Field, Value, and Key columns.');
+    T.run();
+    ioMsg(p, `Loaded ${file.name}: ${[rows ? `${rows} rows` : '', settings ? `${settings} settings` : ''].filter(Boolean).join(' and ')}.`);
+  }catch(e){ ioMsg(p, e.message, true); }
+}
+document.querySelectorAll('[data-save]').forEach(b => b.addEventListener('click', async () => { const p = b.dataset.save; try{ await exportTool(p); ioMsg(p, 'Saved. Open it back here anytime to pick up where you left off.'); }catch(e){ ioMsg(p, 'Could not build the Excel file: ' + e.message, true); } }));
+document.querySelectorAll('[data-open]').forEach(inp => inp.addEventListener('change', e => { importTool(inp.dataset.open, e.target.files[0]); e.target.value = ''; }));
+
+/* ====== Motion ====== */
+const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.proj').forEach(c => c.addEventListener('click', () => { c.classList.remove('play'); void c.offsetWidth; c.classList.add('play'); clearTimeout(c._t); c._t = setTimeout(() => c.classList.remove('play'), 2600); }));
+if (!still){
+  { const r = $('route'), p = r.getPointAtLength(0), q = r.getPointAtLength(1); $('plane').setAttribute('transform', `translate(${p.x} ${p.y}) rotate(${Math.atan2(q.y-p.y,q.x-p.x)*180/Math.PI})`); }
+  document.querySelectorAll('.stamp').forEach(el => el.classList.add('pre'));
+  document.querySelectorAll('.pub .m').forEach(el => el.classList.add('pre'));
+}
+const seen = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const el = e.target; seen.unobserve(el);
+  if (el.classList.contains('stamp')) setTimeout(() => { el.classList.remove('pre'); el.classList.add('inked'); }, el.classList.contains('b') ? 150 : 0);
+  else if (el.classList.contains('m')) { el.classList.add('drawn'); requestAnimationFrame(() => el.classList.remove('pre')); }
+  else if (el.id === 'route') fly();
+}), {threshold:.6});
+document.querySelectorAll('.stamp, .pub .m, #route').forEach(el => seen.observe(el));
+let flying = false;
+document.querySelector('.pass').addEventListener('mouseenter', () => { if (!flying) fly(); });
+document.querySelector('.pass').addEventListener('click', () => { if (!flying) fly(); });
+function fly(){
+  const route = $('route'), plane = $('plane'), L = route.getTotalLength();
+  const at = t => { const p = route.getPointAtLength(L*t), q = route.getPointAtLength(Math.min(L, L*t + 1)); return [p.x, p.y, Math.atan2(q.y-p.y, q.x-p.x)*180/Math.PI]; };
+  if (still) return;
+  flying = true; const t0 = performance.now(), D = 1800;
+  (function step(now){
+    const k = Math.min(1, (now - t0)/D), e = 1 - Math.pow(1-k, 3), [x,y,a] = at(0.5*e);
+    plane.setAttribute('transform', `translate(${x.toFixed(2)} ${y.toFixed(2)}) rotate(${a.toFixed(1)})`);
+    if (k < 1) requestAnimationFrame(step); else flying = false;
+  })(t0);
+}
+</script>
+</body>
+</html>
